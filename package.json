@@ -11,9 +11,9 @@
     "types"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "css": "postcss src/styles/index.pcss -o src/styles/index.css"
+    "css": "postcss src/styles/index.pcss -o src/styles/index.css",
+    "dev": "npm run css && vite",
+    "build": "tsc && vite build"
   },
   "dependencies": {
     "lit": "^2.0.0"

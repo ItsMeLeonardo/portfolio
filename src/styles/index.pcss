@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap');
+@font-face {
+    font-family: 'lufgabold';
+    src: url('../../public/fonts/lufga-bold-webfont.woff2') format('woff2'),
+    url('../../public/fonts/lufga-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'lufgaregular';
+    src: url('../../public/fonts/lufga-regular-webfont.woff2') format('woff2'),
+    url('../../public/fonts/lufga-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 :root {
     /* ---- colors ----*/
     --dark: #0d0d0d;
@@ -10,14 +28,15 @@
     --gray: #c9cbcf;
 
     /* ---- font ---- */
-    --main-font: 'lufga', sans-serif;
-    --serif-font: 'philosoper', serif;
+    --main-font: 'lufgaregular', sans-serif;
+    --main-font-bold: 'lufgabold', sans-serif;
+    --serif-font: 'Philosopher', serif;
 
     --paragraph: .875rem var(--main-font);
-    --hero: 1.875rem var(--main-font);
+    --hero: 1.875rem var(--main-font-bold);
     --phrase: italic 1.25rem var(--serif-font);
-    --section-title: bold 1.5rem var(--main-font);
-    --subtitle: bold 1rem var(--main-font);
+    --section-title: bold 1.5rem var(--main-font-bold);
+    --subtitle: bold 1rem var(--main-font-bold);
     --btn-font:  .75rem var(--main-font);
     --input-font: .80rem var(--main-font);
     --project-title-detail: bold 2rem var(--main-font);
@@ -27,9 +46,66 @@
     /* ---- shadows ----*/
     --pale-dark-shadow: 0 10px 100px rgba(42, 42, 42, 0.12);
     --primary-shadow: 0 32px 40px -12px rgba(255, 142, 60, 0.35);
+    --secondary-shadow: 0 32px 40px -12px rgba(42, 42, 42, 0.35);
     --dark-shadow: 0 32px 40px -12px rgba(42, 42, 42, 0.35);
+    --btn-active-shadow: inset 0 5px 16px rgba(42, 42, 42, 0.25);
+    --btn-hover-shadow: inset 0 0 0 transparent;
 
     /* ---- border-radius ----*/
     --small-radius: .5rem;
     --large-radius: 1rem;
+
+    /* ---- transition ----*/
+    --transition:  0.4s ease-in-out;
+
+}
+
+/* ---- reset styles ---- */
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    border: none;
+    list-style: none;
+}
+
+body {
+    font-family: var(--main-font);
+    background: var(--main-bg);
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+/* ---- glass effect ---- */
+.glass-light {
+    backdrop-filter: blur(6px) saturate(120%) contrast(45%) brightness(130%);
+    background: var(--white-to-glass);
+}
+
+/* ---- buttons ---- */
+.Button {
+    padding: .5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: var(--small-radius);
+    font: var(--btn-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Button:hover {
+    box-shadow: var(--btn-hover-shadow);
+}
+.Button:active {
+    box-shadow: var(--btn-active-shadow);
+}
+.Button--primary {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--primary-shadow);
+}
+.Button--secondary {
+    background: var(--secondary);
+    color: var(--text);
+    box-shadow: var(--secondary-shadow);
 }
