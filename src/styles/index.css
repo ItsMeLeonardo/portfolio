@@ -37,8 +37,9 @@
     --hero-size: 1.875rem;
     --btn-size: .75rem;
     --phrase-size: 1.25rem;
+    --paragraph-size:.875rem ;
 
-    --paragraph: .875rem var(--main-font);
+    --paragraph: var(--paragraph-size) var(--main-font);
     --hero-text: var(--hero-size) var(--main-font-bold);
     --phrase: italic var(--phrase-size) var(--serif-font);
     --section-title: bold 1.5rem var(--main-font-bold);
@@ -687,6 +688,7 @@ textarea {
         --hero-size: 40px;
         --btn-size: 1rem;
         --phrase-size: 1.75rem;
+        --paragraph-size: 1rem;
 
         /* ---- container ---- */
         --padding-container: 1rem;
@@ -766,5 +768,12 @@ textarea {
         position: relative;
     }
 
-    /* ---- Phrase ---- */
+    /* ---- about me ---- */
+    .About-content {
+        padding: 0 15%;
+    }
+    .paragraph {
+        text-align: center;
+        line-height: 1.75rem;
+    }
 }
