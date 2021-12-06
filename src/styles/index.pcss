@@ -43,6 +43,7 @@
     --input-font: .80rem var(--main-font);
     --project-title-detail: bold 2rem var(--main-font);
     --project-title-card: bold 1rem var(--main-font);
+    --card-small-title: bold .85rem var(--main-font);
     --bagde-font: var(--btn-font);
 
     /* ---- shadows ----*/
@@ -482,8 +483,7 @@ body {
     }
 }
 .skill-name {
-    font: var(--project-title-card);
-    font-size: .85rem;
+    font: var(--card-small-title);
     color: var(--text);
     position: absolute;
     bottom: -1rem;
@@ -503,4 +503,34 @@ body {
     &:hover {
         box-shadow: var(--pale-dark-shadow);
     }
+}
+
+/* ---- Hobbies ---- */
+.Hobbies {
+    margin-top: 2rem;
+    display: block;
+    text-align: center;
+}
+.Hobbies-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: .75rem;
+    justify-content: center;
+    align-items: center;
+}
+.Hobbies-item {
+    --size: 130px;
+    width: var(--size);
+    height: var(--size);
+    background: var(--white);
+    border-radius: var(--small-radius);
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Hobbies-name {
+    font: var(--card-small-title);
 }
