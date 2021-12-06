@@ -14,9 +14,11 @@
 <nav class="NavbarContent">
   <header class="Navbar glass-light">
     <div class="Navbar-Left">
-      <picture class="Navbar-logo">
-        <img src="/icons/svg/logo-dark.svg" alt="DaLeo's logo">
-      </picture>
+      <a href="#">
+        <picture class="Navbar-logo">
+          <img src="/icons/svg/logo-dark.svg" alt="DaLeo's logo">
+        </picture>
+      </a>
 
       <span class="Navbar-logo-text">DaLeo</span>
 
@@ -173,6 +175,46 @@
         </a>
       </footer>
     </div>
+
+    <div class="ProjectCard">
+      <picture class="ProjectCard-image">
+        <img src="/images/png/my-films.png" alt="My film screen demo">
+      </picture>
+
+      <aside class="Project-tech">
+        <picture class="glass-light IconContent">
+          <img src="/icons/svg/figma.svg" alt="figma">
+        </picture>
+
+        <picture class="glass-light IconContent">
+          <img src="/icons/svg/html.svg" alt="html5">
+        </picture>
+
+        <picture class="glass-light IconContent">
+          <img src="/icons/svg/css.svg" alt="css3">
+        </picture>
+
+        <picture class="glass-light IconContent">
+          <img src="/icons/svg/js.svg" alt="javascript">
+        </picture>
+
+        <picture class="glass-light IconContent">
+          <img src="/icons/svg/react.svg" alt="react">
+        </picture>
+      </aside>
+
+      <footer class="ProjectCard-footer glass-light">
+        <h3 class="ProjectCard-title">
+          My films
+        </h3>
+        <a href="#" class="Button Button--link">
+          See details
+          <picture class="IconContent">
+            <img src="/icons/svg/arrow-right.svg" alt="arrow right">
+          </picture>
+        </a>
+      </footer>
+    </div>
   </article>
 </section>
 
@@ -222,7 +264,7 @@
     <!-- I have worked with   -->
     <article class="Skills-type">
       <header class="skills-title">
-        <h3 class="skills-title">Technologies I master</h3>
+        <h3 class="skills-title">I have worked with</h3>
       </header>
 
       <ul class="Skills-list">
@@ -258,7 +300,7 @@
     <!-- I would like to learn   -->
     <article class="Skills-type">
       <header class="skills-title">
-        <h3 class="skills-title">Technologies I master</h3>
+        <h3 class="skills-title">I would like to learn</h3>
       </header>
 
       <ul class="Skills-list">
@@ -339,6 +381,42 @@
 </section>
 
 <!-- ---- MY CONTACT ME ----    -->
-<section class="Contact" id="contact"></section>
+<section class="Contact section" id="contact">
+  <header class="titleSection">
+    <h2 class="Hobbies-title">Contact Me</h2>
+  </header>
+
+  <aside class="Contact-content">
+    <form action="#" class="Form Contact-form">
+      <header class="Form-title">
+        <h3>Gmail</h3>
+      </header>
+
+      <div class="Form-field-group">
+        <div class="Form-field">
+          <input type="text" name="name" id="name" class="Form-input" placeholder=" ">
+          <label for="name" class="Form-label">Your name here</label>
+        </div>
+
+        <div class="Form-field">
+          <input type="email" id="email" name="name" class="Form-input" placeholder=" ">
+          <label for="email" class="Form-label">name@example.com</label>
+        </div>
+      </div>
+
+      <div class="Form-field">
+        <textarea name="message" id="message" class="Form-input" cols="30" rows="10" placeholder=" "></textarea>
+        <label for="message" class="Form-label">Write here</label>
+      </div>
+      
+      <button class="Form-submit Button Button--primary">
+        Send message
+        <picture>
+          <img src="icons/svg/send.svg" alt="plane icon">
+        </picture>
+      </button>
+    </form>
+  </aside>
+</section>
 </body>
 </html>
