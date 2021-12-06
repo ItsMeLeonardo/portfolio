@@ -37,7 +37,7 @@
     --hero-size: 1.875rem;
     --btn-size: .75rem;
     --phrase-size: 1.25rem;
-    --paragraph-size:.875rem ;
+    --paragraph-size: .875rem;
 
     --paragraph: var(--paragraph-size) var(--main-font);
     --hero-text: var(--hero-size) var(--main-font-bold);
@@ -56,8 +56,8 @@
     --primary-shadow: 0 32px 40px -12px rgba(255, 142, 60, 0.35);
     --secondary-shadow: 0 32px 40px -12px rgba(42, 42, 42, 0.35);
     --dark-shadow: 0 32px 40px -12px rgba(42, 42, 42, 0.35);
-    --btn-active-shadow: inset 0 5px 16px rgba(42, 42, 42, 0.25);
-    --btn-hover-shadow: inset 0 0 0 transparent;
+    --btn-active-shadow: inset 0 5px 28px rgba(183, 89, 53, 0.8);
+    --btn-hover-shadow: 0 0 0 transparent;
 
     /* ---- border-radius ----*/
     --small-radius: .5rem;
@@ -69,6 +69,9 @@
     /* ---- z-index ---- */
     --back: -1;
     --front: 100;
+
+    /* ---- layout ----*/
+    --max-width: 1200px;
 }
 
 /* ---- reset styles ---- */
@@ -86,6 +89,8 @@ body {
     background: var(--main-bg);
     scroll-behavior: smooth;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 textarea {
@@ -103,13 +108,14 @@ textarea {
 .Button {
     padding: .5rem;
     cursor: pointer;
-    transition: var(--transition);
     border-radius: var(--small-radius);
     font: var(--btn-font);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: .5rem;
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow var(--transition);
 }
 
 .Button:hover {
@@ -178,7 +184,7 @@ textarea {
 /* ---- container ---- */
 .container {
     width: 100%;
-    max-width: 1180px;
+    max-width: var(--max-width);;
 }
 
 /* ---- navbar ---- */
@@ -188,6 +194,7 @@ textarea {
     width: 100%;
     top: 0;
     z-index: var(--front);
+    max-width: var(--max-width);
 }
 
 .Navbar, .Navbar-Left {
@@ -258,7 +265,7 @@ textarea {
 .Navbar-link {
     position: relative;
     color: var(--text);
-    font: var(--paragraph);
+    font: var(--project-title-card);
     display: inline;
 }
 
@@ -330,7 +337,12 @@ textarea {
 .SocialMedia-icon {
     border-radius: 50%;
     background: var(--white);
+    transition: transform var(--transition)
 }
+
+.SocialMedia-icon:hover {
+        transform: scale(1.2);
+    }
 
 .Hero-image {
     position: absolute;
@@ -411,8 +423,17 @@ textarea {
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+       object-position: center
 }
+
+.ProjectCard-image img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
+    }
 
 .Project-tech {
     display: flex;
@@ -467,12 +488,21 @@ textarea {
     padding: 0 .5rem
 }
 
+.ProjectCard-footer .Button--link {
+        opacity: .4;
+    }
+
+.ProjectCard-footer:hover .Button--link {
+        opacity: 1;
+    }
+
 .ProjectCard-footer:hover .IconContent {
         transform: translateX(.25rem);
     }
 
 .ProjectCard-title {
     font: var(--subtitle);
+    margin-left: 0.5rem;
 }
 
 /* ---- skills ---- */
@@ -516,7 +546,6 @@ textarea {
     --size: 80px;
     width: var(--size);
     height: var(--size);
-    background: var(--white);
     border-radius: var(--small-radius);
     transition: box-shadow var(--transition);
     display: flex;
@@ -611,7 +640,13 @@ textarea {
     background: var(--white);
     border-radius: var(--large-radius) var(--large-radius) 0 0;
     padding: 1rem 10% 4rem 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.Form {
+    max-width: 500px;
 }
 
 .Form, .Form-field-group {
@@ -627,6 +662,7 @@ textarea {
 
 .Form-field {
     width: 100%;
+    height: 100%;
     background: var(--main-bg);
     border-radius: var(--small-radius);
     position: relative;
@@ -653,12 +689,12 @@ textarea {
     height: 100%;
     outline: none;
     border-radius: inherit;
-    border: 1px double transparent;
+    border: 2px double transparent;
     transition: border var(--transition)
 }
 
 .Form-input:focus {
-        border: 1px solid var(--primary);
+        border: 2px solid var(--primary);
     }
 
 .Form-input:focus + .Form-label {
@@ -699,6 +735,7 @@ textarea {
     .Button {
         padding: .85rem;
     }
+
     .Button--link {
         font-size: .95rem;
     }
@@ -746,6 +783,7 @@ textarea {
     .Hero {
         justify-content: space-between;
     }
+
     .icon-download {
         --size: 1.25rem;
         width: var(--size);
@@ -776,6 +814,7 @@ textarea {
     .About-content {
         padding: 0 15%;
     }
+
     .paragraph {
         text-align: center;
         line-height: 1.75rem;
@@ -785,6 +824,7 @@ textarea {
     .ProjectCard {
         width: 316px;
     }
+
     .Project-tech {
         bottom: 4.5rem;
     }
@@ -794,6 +834,7 @@ textarea {
         justify-content: center;
         gap: 1.5rem;
     }
+
     .Skills-type {
         width: 316px;
     }
@@ -802,10 +843,45 @@ textarea {
     .Form-title {
         padding-top: .75rem;
     }
+
     .Form, .Form-field-group {
         gap: 1.5rem;
     }
+
     .Form-field-group {
         flex-direction: row;
+    }
+}
+
+/* ---- Desktop ---- */
+@media screen and (min-width: 1200px) {
+    :root {
+        /* ---- container ---- */
+        --padding-container: 0rem;
+        --hero-size: 60px;
+    }
+
+    .section {
+        margin-top: 4rem;
+    }
+
+    .Hero {
+        margin-top: 120px;
+    }
+
+    /* ---- My projects ---- */
+    .ProjectCard {
+        width: 380px;
+    }
+
+
+    /* ---- My skills ---- */
+    .Skills-type {
+        width: 380px;
+    }
+
+    /* ---- about me ---- */
+    .About-content {
+        padding: 0 25%;
     }
 }
