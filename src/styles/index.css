@@ -25,7 +25,7 @@
     --main-bg: #eff0f3;
     --primary: #ff8e3c;
     --secondary: #d9376e;
-    --white-to-glass: #fffffe;
+    --white-to-glass: rgba(255, 255, 254, 0.85);
     --gray: #c9cbcf;
 
     /* ---- font ---- */
@@ -34,7 +34,7 @@
     --serif-font: 'Philosopher', serif;
 
     --paragraph: .875rem var(--main-font);
-    --hero: 1.875rem var(--main-font-bold);
+    --hero-text: 1.875rem var(--main-font-bold);
     --phrase: italic 1.25rem var(--serif-font);
     --section-title: bold 1.5rem var(--main-font-bold);
     --subtitle: bold 1rem var(--main-font-bold);
@@ -59,6 +59,9 @@
     /* ---- transition ----*/
     --transition:  0.4s ease-in-out;
 
+    /* ---- z-index ---- */
+    --back: -1;
+    --front: 100;
 }
 
 /* ---- reset styles ---- */
@@ -68,6 +71,7 @@
     box-sizing:border-box;
     border: none;
     list-style: none;
+    text-decoration: none;
 }
 
 body {
@@ -92,8 +96,9 @@ body {
     border-radius: var(--small-radius);
     font: var(--btn-font);
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    gap: .5rem;
 }
 .Button:hover {
     box-shadow: var(--btn-hover-shadow);
@@ -118,12 +123,23 @@ body {
     opacity: 0;
     transition: opacity var(--transition);
 }
+.IconContent {
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* ---- navbar ---- */
 .NavbarContent {
     padding: .5rem .25rem;
     position: fixed;
     width: 100%;
+    top: 0;
+    z-index: var(--front);
 }
 .Navbar, .Navbar-Left, .Navbar-right {
     display: flex;
@@ -149,12 +165,6 @@ body {
 .Navbar-logo-text {
     font: var(--paragraph);
     color: var(--text);
-}
-.IconContent {
-    --size: 2rem;
-    width: var(--size);
-    height: var(--size);
-    padding: 0;
 }
 .icon-open, .icon-close {
     padding: .5rem;
@@ -208,3 +218,60 @@ body {
     background: var(--primary);
     left: 0;
 }
+
+/* ---- Hero ----*/
+.Hero, .Hero-data {
+    display: flex;
+}
+.Hero {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    padding-left: .5rem;
+
+}
+.Hero-data {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.Hero-header {
+    width: 100%;
+}
+.Hero-text {
+    font: var(--hero-text);
+    color: var(--text);
+    text-align: start;
+}
+.Hero-name {
+    color: var(--primary);
+}
+
+.SocialMedia {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+.SocialMedia-icon{
+    border-radius: 50%;
+    background: var(--white);
+}
+.Hero-image {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    z-index: -1
+}
+.Hero-image img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
+    }

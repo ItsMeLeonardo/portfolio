@@ -13,6 +13,7 @@
   "scripts": {
     "css": "postcss src/styles/index.pcss -o src/styles/index.css",
     "dev": "npm run css && vite",
+    "post": "postcss --watch src/styles/index.pcss -o src/styles/index.css",
     "build": "tsc && vite build"
   },
   "dependencies": {
