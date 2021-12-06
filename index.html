@@ -1,27 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>DaLeo |  It's me leonardo</title>
-    <link rel="stylesheet" href="src/styles/index.css">
-    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="/src/my-app.ts" defer></script>
-  </head>
-  <body>
-   <!-- ---- NAVBAR ----    -->
-   <nav class="navbar">
-   </nav>
-    <!-- ---- HERO ----    -->
+<head>
+  <meta charset="UTF-8"/>
+  <title>DaLeo | It's me leonardo</title>
+  <link rel="stylesheet" href="src/styles/index.css">
+  <link rel="icon" type="image/svg+xml" href="/src/favicon.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="module" src="/src/my-app.ts" defer></script>
+  <script src="/scripts/navbar.js" defer></script>
+</head>
+<body>
+<!-- ---- NAVBAR ----    -->
+<nav class="NavbarContent">
+  <header class="Navbar glass-light">
+    <div class="Navbar-Left">
+      <picture class="Navbar-logo">
+        <img src="/icons/svg/logo-dark.svg" alt="DaLeo's logo">
+      </picture>
 
-    <!-- ---- WHO I AM ----    -->
+      <span class="Navbar-logo-text">DaLeo</span>
 
-    <!-- ---- MY PROJECTS ----    -->
+      <picture class="icon-open Button">
+        <img class="icon" src="/icons/svg/menu-open.svg" alt="open menu">
+      </picture>
 
-    <!-- ---- MY SKILLS ----    -->
+      <picture class="icon-close Button hidden">
+        <img class="icon" src="/icons/svg/close.svg" alt="close menu">
+      </picture>
+    </div>
 
-    <!-- ---- MY HOBBIES ----    -->
+    <ul class="Navbar-right hidden">
 
-    <!-- ---- MY CONTACT ME ----    -->
-  </body>
+      <li class="Navbar-item">
+        <a href="#about" class="Navbar-link">About me</a>
+      </li>
+
+      <li class="Navbar-item">
+        <a href="#projects" class="Navbar-link">Projects</a>
+      </li>
+
+      <li class="Navbar-item">
+        <a href="#skills" class="Navbar-link">Skills</a>
+      </li>
+
+      <li class="Navbar-item">
+        <a href="#contact" class="Navbar-link">Contact</a>
+      </li>
+
+    </ul>
+  </header>
+</nav>
+<!-- ---- HERO ----    -->
+
+<!-- ---- WHO I AM ----    -->
+<section id="about"></section>
+
+<!-- ---- MY PROJECTS ----    -->
+<section id="projects"></section>
+<!-- ---- MY SKILLS ----    -->
+<section id="skills"></section>
+<!-- ---- MY HOBBIES ----    -->
+
+<!-- ---- MY CONTACT ME ----    -->
+<section id="contact"></section>
+</body>
 </html>

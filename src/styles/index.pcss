@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap');
+
 @font-face {
     font-family: 'lufgabold';
-    src: url('../../public/fonts/lufga-bold-webfont.woff2') format('woff2'),
-    url('../../public/fonts/lufga-bold-webfont.woff') format('woff');
+    src: url('/fonts/lufga-bold-webfont.woff2') format('woff2'),
+    url('/fonts/lufga-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -10,8 +11,8 @@
 
 @font-face {
     font-family: 'lufgaregular';
-    src: url('../../public/fonts/lufga-regular-webfont.woff2') format('woff2'),
-    url('../../public/fonts/lufga-regular-webfont.woff') format('woff');
+    src: url('/fonts/lufga-regular-webfont.woff2') format('woff2'),
+    url('/fonts/lufga-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -108,4 +109,101 @@ body {
     background: var(--secondary);
     color: var(--text);
     box-shadow: var(--secondary-shadow);
+}
+
+/* ---- utils ----*/
+.hidden {
+    display: none !important;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+/* ---- navbar ---- */
+.NavbarContent {
+    padding: .5rem .25rem;
+    position: fixed;
+    width: 100%;
+}
+.Navbar, .Navbar-Left, .Navbar-right {
+    display: flex;
+}
+.Navbar {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    border-radius: var(--large-radius);
+    padding: .85rem;
+    transition: height var(--transition);
+}
+.Navbar.open-mobile {
+    height: 70vh;
+}
+.Navbar-Left {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.Navbar-logo-text {
+    font: var(--paragraph);
+    color: var(--text);
+}
+.IconContent {
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
+}
+.icon-open, .icon-close {
+    padding: .5rem;
+    border-radius: var(--small-radius);
+}
+.icon-open {
+    background: var(--primary)
+}
+.icon-close {
+    background: var(--secondary)
+}
+.Navbar-right {
+    opacity: 1;
+    height: calc(100% - 60px);
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Navbar-item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.Navbar-link {
+    position: relative;
+    color: var(--text);
+    font: var(--paragraph);
+    display: inline;
+}
+.Navbar-link::after {
+    content: '';
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    mix-blend-mode: darken;
+    transition: var(--transition);
+    overflow: hidden;
+    left:-100%;
+    bottom: 0;
+}
+.Navbar-link.isActive::after {
+    background: var(--primary);
+    left:0;
+}
+
+.Navbar-item:hover .Navbar-link::after  {
+    background: var(--primary);
+    left: 0;
 }
