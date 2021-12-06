@@ -631,6 +631,7 @@ textarea {
     left: .8rem;
     color: var(--text);
     transition: var(--transition);
+    opacity: .5;
 }
 
 .Form-label, .Form-input {
@@ -780,8 +781,14 @@ textarea {
         width: 316px;
     }
 
-    /* ---- Hobbies ---- */
-
-
     /* ---- Contact Me ---- */
+    .Form-title {
+        padding-top: .75rem;
+    }
+    .Form, .Form-field-group {
+        gap: 1.5rem;
+    }
+    .Form-field-group {
+        flex-direction: row;
+    }
 }
