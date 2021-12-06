@@ -116,7 +116,7 @@ body {
     box-shadow: var(--secondary-shadow);
 }
 
-/* ---- utils ----*/
+/* ---- utils and global styles ----*/
 .hidden {
     display: none !important;
     opacity: 0;
@@ -130,6 +130,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.titleSection {
+    font: var(--section-title);
+    color: var(--primary);
+}
+.paragraph {
+    font: var(--paragraph);
+    color: var(--text);
+    line-height: 25px;
 }
 
 /* ---- navbar ---- */
@@ -271,4 +280,24 @@ body {
         object-fit: cover;
         object-position: center;
     }
+}
+
+/* ---- My phrase ---- */
+.MyPhrase {
+    display: block;
+    text-align: center;
+    font: var(--phrase);
+    padding: 0 15%;
+    letter-spacing: 0.03rem;
+    margin: 2rem 0;
+}
+
+/* ---- about ---- */
+.About {
+    width: 100%;
+    text-align: center;
+}
+.About-content {
+    margin-top: 1rem;
+    padding: 0 1.5rem ;
 }
