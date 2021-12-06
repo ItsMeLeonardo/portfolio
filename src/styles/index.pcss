@@ -56,7 +56,7 @@
     --primary-shadow: 0 32px 40px -12px rgba(255, 142, 60, 0.35);
     --secondary-shadow: 0 32px 40px -12px rgba(42, 42, 42, 0.35);
     --dark-shadow: 0 32px 40px -12px rgba(42, 42, 42, 0.35);
-    --btn-active-shadow: inset 0 5px 28px rgba(183, 89, 53, 0.8);
+    --btn-active-shadow: inset 0px 0.1em 0.6em #e0623c;
     --btn-hover-shadow: 0 0 0 transparent;
 
     /* ---- border-radius ----*/
@@ -92,7 +92,10 @@ body {
     display: flex;
     justify-content: center;
 }
-
+::selection {
+    background: var(--primary);
+    color: var(--white);
+}
 textarea {
     resize: none;
 }
@@ -698,6 +701,17 @@ textarea {
 .Form-submit {
     align-self: flex-end;
 }
+.Form-icon {
+    --size: 1.25rem;
+    width: var(--size);
+    height: var(--size);
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
 
 /* media queries TABLET*/
 @media (min-width: 768px) {
@@ -849,6 +863,11 @@ textarea {
         margin-top: 120px;
     }
 
+    /* ---- about me ---- */
+    .About-content {
+        padding: 0 25%;
+    }
+
     /* ---- My projects ---- */
     .ProjectCard {
         width: 380px;
@@ -860,8 +879,9 @@ textarea {
         width: 380px;
     }
 
-    /* ---- about me ---- */
-    .About-content {
-        padding: 0 25%;
+    /* ---- Hobbies ----*/
+    .Hobbies-content {
+        gap: 2rem;
     }
+
 }
