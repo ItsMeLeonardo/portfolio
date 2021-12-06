@@ -17,6 +17,7 @@
     font-style: normal;
 
 }
+
 :root {
     /* ---- colors ----*/
     --dark: #0d0d0d;
@@ -38,7 +39,7 @@
     --phrase: italic 1.25rem var(--serif-font);
     --section-title: bold 1.5rem var(--main-font-bold);
     --subtitle: bold 1rem var(--main-font-bold);
-    --btn-font:  .75rem var(--main-font);
+    --btn-font: .75rem var(--main-font);
     --input-font: .80rem var(--main-font);
     --project-title-detail: bold 2rem var(--main-font);
     --project-title-card: bold 1rem var(--main-font);
@@ -57,7 +58,7 @@
     --large-radius: 1rem;
 
     /* ---- transition ----*/
-    --transition:  0.4s ease-in-out;
+    --transition: 0.4s ease-in-out;
 
     /* ---- z-index ---- */
     --back: -1;
@@ -65,10 +66,10 @@
 }
 
 /* ---- reset styles ---- */
-*,::after,::before{
+*, ::after, ::before {
     padding: 0;
     margin: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
     border: none;
     list-style: none;
     text-decoration: none;
@@ -99,21 +100,33 @@ body {
     align-items: center;
     gap: .5rem;
 }
+
 .Button:hover {
     box-shadow: var(--btn-hover-shadow);
 }
+
 .Button:active {
     box-shadow: var(--btn-active-shadow);
 }
+
 .Button--primary {
     background: var(--primary);
     color: var(--white);
     box-shadow: var(--primary-shadow);
 }
+
 .Button--secondary {
     background: var(--secondary);
     color: var(--text);
     box-shadow: var(--secondary-shadow);
+}
+
+.Button--link {
+    background: transparent;
+    color: var(--secondary);
+    box-shadow: none;
+    font-size: .85rem;
+    gap: .25rem;
 }
 
 /* ---- utils and global styles ----*/
@@ -122,6 +135,7 @@ body {
     opacity: 0;
     transition: opacity var(--transition);
 }
+
 .IconContent {
     --size: 2rem;
     width: var(--size);
@@ -130,11 +144,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: var(--transition);
 }
+
 .titleSection {
     font: var(--section-title);
     color: var(--primary);
 }
+
 .paragraph {
     font: var(--paragraph);
     color: var(--text);
@@ -149,9 +166,11 @@ body {
     top: 0;
     z-index: var(--front);
 }
+
 .Navbar, .Navbar-Left, .Navbar-right {
     display: flex;
 }
+
 .Navbar {
     justify-content: space-between;
     flex-direction: column;
@@ -162,28 +181,35 @@ body {
     padding: .85rem;
     transition: height var(--transition);
 }
+
 .Navbar.open-mobile {
     height: 70vh;
 }
+
 .Navbar-Left {
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
+
 .Navbar-logo-text {
     font: var(--paragraph);
     color: var(--text);
 }
+
 .icon-open, .icon-close {
     padding: .5rem;
     border-radius: var(--small-radius);
 }
+
 .icon-open {
     background: var(--primary)
 }
+
 .icon-close {
     background: var(--secondary)
 }
+
 .Navbar-right {
     opacity: 1;
     height: calc(100% - 60px);
@@ -192,6 +218,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
+
 .Navbar-item {
     display: flex;
     justify-content: center;
@@ -206,6 +233,7 @@ body {
     font: var(--paragraph);
     display: inline;
 }
+
 .Navbar-link::after {
     content: '';
     position: absolute;
@@ -214,15 +242,16 @@ body {
     mix-blend-mode: darken;
     transition: var(--transition);
     overflow: hidden;
-    left:-100%;
+    left: -100%;
     bottom: 0;
 }
+
 .Navbar-link.isActive::after {
     background: var(--primary);
-    left:0;
+    left: 0;
 }
 
-.Navbar-item:hover .Navbar-link::after  {
+.Navbar-item:hover .Navbar-link::after {
     background: var(--primary);
     left: 0;
 }
@@ -231,6 +260,7 @@ body {
 .Hero, .Hero-data {
     display: flex;
 }
+
 .Hero {
     position: relative;
     width: 100%;
@@ -238,6 +268,7 @@ body {
     padding-left: .5rem;
 
 }
+
 .Hero-data {
     flex-direction: column;
     align-items: flex-start;
@@ -247,11 +278,13 @@ body {
 .Hero-header {
     width: 100%;
 }
+
 .Hero-text {
     font: var(--hero-text);
     color: var(--text);
     text-align: start;
 }
+
 .Hero-name {
     color: var(--primary);
 }
@@ -265,15 +298,18 @@ body {
     padding: 1rem 0;
     gap: 1rem;
 }
-.SocialMedia-icon{
+
+.SocialMedia-icon {
     border-radius: 50%;
     background: var(--white);
 }
+
 .Hero-image {
     position: absolute;
     right: 0;
     bottom: 5%;
     z-index: -1;
+
     & img {
         width: 100%;
         height: 100%;
@@ -297,7 +333,90 @@ body {
     width: 100%;
     text-align: center;
 }
+
 .About-content {
     margin-top: 1rem;
-    padding: 0 1.5rem ;
+    padding: 0 1.5rem;
+}
+
+/* ---- My projects ----*/
+.Projects {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ProjectCard {
+    --size: 280px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--large-radius);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--pale-dark-shadow);
+}
+
+.ProjectCard-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Project-tech {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 3.5rem;
+
+    & .IconContent {
+        --delay: 0;
+        --size: 40px;
+        border-radius: var(--small-radius);
+        position: relative;
+        top: 4rem;
+        transition: top var(--transition);
+        transition-delay: var(--delay);
+    }
+    & .IconContent:nth-child(1) {
+        --delay: 0.1s;
+    }
+    & .IconContent:nth-child(2) {
+        --delay: 0.2s;
+    }
+    & .IconContent:nth-child(3) {
+        --delay: 0.3s;
+    }
+    & .IconContent:nth-child(4) {
+        --delay: 0.4s;
+    }
+    & .IconContent:nth-child(5) {
+        --delay: 0.5s;
+    }
+}
+.ProjectCard:hover .Project-tech .IconContent {
+    top: 0;
+}
+
+.ProjectCard-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5rem;
+    &:hover .IconContent {
+        transform: translateX(.25rem);
+    }
+}
+
+.ProjectCard-title {
+    font: var(--subtitle);
 }
