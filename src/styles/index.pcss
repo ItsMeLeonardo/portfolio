@@ -34,8 +34,10 @@
     --main-font-bold: 'lufgabold', sans-serif;
     --serif-font: 'Philosopher', serif;
 
+    --hero-size: 1.875rem;
+
     --paragraph: .875rem var(--main-font);
-    --hero-text: 1.875rem var(--main-font-bold);
+    --hero-text:  var(--hero-size) var(--main-font-bold);
     --phrase: italic 1.25rem var(--serif-font);
     --section-title: bold 1.5rem var(--main-font-bold);
     --subtitle: bold 1rem var(--main-font-bold);
@@ -167,6 +169,11 @@ textarea {
     display: block;
     text-align: center;
 }
+/* ---- container ---- */
+.container {
+    width: 100%;
+    max-width: 1180px;
+}
 /* ---- navbar ---- */
 .NavbarContent {
     padding: .5rem .25rem;
@@ -176,7 +183,7 @@ textarea {
     z-index: var(--front);
 }
 
-.Navbar, .Navbar-Left, .Navbar-right {
+.Navbar, .Navbar-Left {
     display: flex;
 }
 
@@ -191,7 +198,7 @@ textarea {
     transition: height var(--transition);
 }
 
-.Navbar.open-mobile {
+.open-mobile {
     height: 70vh;
 }
 
@@ -220,12 +227,16 @@ textarea {
 }
 
 .Navbar-right {
+    display: none;
     opacity: 1;
     height: calc(100% - 60px);
     width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+.Navbar-right.isActive {
+    display: flex;
 }
 
 .Navbar-item {
@@ -549,12 +560,14 @@ textarea {
 }
 
 /* ---- contact me ---- */
+
 .Contact-content {
     margin-top: 1rem;
     width: 100%;
     background: var(--white);
     border-radius: var(--large-radius) var(--large-radius) 0 0;
-    padding: 1rem 10%;
+    padding: 1rem 10% 4rem 10%;
+
 }
 .Form, .Form-field-group {
     display: flex;
@@ -604,4 +617,46 @@ textarea {
 }
 .Form-submit {
     align-self: flex-end;
+}
+
+/* media queries TABLET*/
+@media (min-width: 768px) {
+    :root {
+
+        /* ---- container ---- */
+        --padding-container: 1rem;
+    }
+
+    /* container */
+    .container {
+        padding: 0 var(--padding-container);
+    }
+
+    /* ---- Navbar ---- */
+    .NavbarContent {
+        padding: 1.25rem 0;
+        width: calc(100% - (2 * var(--padding-container)));
+    }
+    .Navbar {
+        flex-direction: row;
+        & .icon-open, & .icon-close {
+            display: none;
+        }
+    }
+    .Navbar-Left {
+        justify-content: flex-start;
+        gap: .75rem;
+        & .Navbar-logo-text {
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: .1rem;
+        }
+    }
+    .Navbar-right {
+        display: flex;
+        flex-direction: row;
+    }
+    .open-mobile {
+        height: auto;
+    }
 }

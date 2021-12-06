@@ -8,13 +8,13 @@ const navbarRight = document.querySelector('.Navbar-right')
 btnOpen.addEventListener('click', () => {
   navbar.classList.add('open-mobile')
   btnClose.classList.remove('hidden')
-  setTimeout(() => navbarRight.classList.remove('hidden'), 300)
+  setTimeout(() => navbarRight.classList.add('isActive'), 300)
   btnOpen.classList.add('hidden')
 })
 
 btnClose.addEventListener('click', () => {
   navbar.classList.remove('open-mobile')
-  navbarRight.classList.add('hidden')
+  navbarRight.classList.remove('isActive')
   btnOpen.classList.remove('hidden')
   btnClose.classList.add('hidden')
 })
