@@ -698,6 +698,9 @@ textarea {
     .Button {
         padding: .85rem;
     }
+    .Button--link {
+        font-size: .95rem;
+    }
 
     /* ---- container ---- */
     .container {
@@ -775,5 +778,13 @@ textarea {
     .paragraph {
         text-align: center;
         line-height: 1.75rem;
+    }
+
+    /* ---- My projects ---- */
+    .ProjectCard {
+        width: 316px;
+    }
+    .Project-tech {
+        bottom: 4.5rem;
     }
 }
