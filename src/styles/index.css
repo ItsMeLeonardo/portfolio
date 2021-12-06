@@ -787,4 +787,18 @@ textarea {
     .Project-tech {
         bottom: 4.5rem;
     }
+
+    /* ---- My skills ---- */
+    .Skills-content {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    .Skills-type {
+        width: 316px;
+    }
+
+    /* ---- Hobbies ---- */
+
+
+    /* ---- Contact Me ---- */
 }
