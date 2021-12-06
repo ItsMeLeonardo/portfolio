@@ -84,6 +84,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--main-font);
     background: var(--main-bg);
@@ -92,10 +96,12 @@ body {
     display: flex;
     justify-content: center;
 }
+
 ::selection {
     background: var(--primary);
     color: var(--white);
 }
+
 textarea {
     resize: none;
 }
@@ -148,6 +154,28 @@ textarea {
     gap: .25rem;
 }
 
+/* scroll up */
+.scroll-up {
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+    position: fixed;
+    bottom: -20%;
+    right: 2rem;
+    cursor: pointer;
+    z-index: var(--front);
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: bottom var(--transition);
+    border: solid 1px var(--primary);
+}
+.scroll-up.isActive {
+    bottom: 2rem;
+}
+
 /* ---- utils and global styles ----*/
 .hidden {
     display: none !important;
@@ -169,6 +197,7 @@ textarea {
 .titleSection {
     font: var(--section-title);
     color: var(--primary);
+    margin-bottom: 2rem;
 }
 
 .paragraph {
@@ -178,7 +207,7 @@ textarea {
 }
 
 .section {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: block;
     text-align: center;
 }
@@ -375,7 +404,7 @@ textarea {
     font: var(--phrase);
     padding: 0 15%;
     letter-spacing: 0.03rem;
-    margin: 2rem 0;
+    //margin: 2rem 0;
 }
 
 /* ---- about ---- */
@@ -385,14 +414,14 @@ textarea {
 }
 
 .About-content {
-    margin-top: 1rem;
+    //margin-top: 1rem;
     padding: 0 1.5rem;
 }
 
 /* ---- My projects ----*/
 .Projects {
     width: 100%;
-    margin-top: 2rem;
+    //margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -486,9 +515,11 @@ textarea {
     & .Button--link {
         opacity: .4;
     }
+
     &:hover .Button--link {
         opacity: 1;
     }
+
     &:hover .IconContent {
         transform: translateX(.25rem);
     }
@@ -501,7 +532,7 @@ textarea {
 
 /* ---- skills ---- */
 .Skills {
-    margin-top: 2rem;
+    //margin-top: 2rem;
     display: block;
     text-align: center;
 }
@@ -593,7 +624,7 @@ textarea {
 
 /* ---- Hobbies ---- */
 .Hobbies {
-    margin-top: 2rem;
+    //margin-top: 2rem;
     display: block;
     text-align: center;
 }
@@ -627,7 +658,7 @@ textarea {
 /* ---- contact me ---- */
 
 .Contact-content {
-    margin-top: 1rem;
+    //margin-top: 1rem;
     width: 100%;
     background: var(--white);
     border-radius: var(--large-radius) var(--large-radius) 0 0;
@@ -701,10 +732,12 @@ textarea {
 .Form-submit {
     align-self: flex-end;
 }
+
 .Form-icon {
     --size: 1.25rem;
     width: var(--size);
     height: var(--size);
+
     & img {
         width: 100%;
         height: 100%;

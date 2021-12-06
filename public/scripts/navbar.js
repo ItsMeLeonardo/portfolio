@@ -20,7 +20,6 @@ btnClose.addEventListener('click', () => {
 })
 
 // active navbar items
-
 const items = document.querySelectorAll('.Navbar-item')
 
 items.forEach((item) => {
@@ -29,3 +28,39 @@ items.forEach((item) => {
     item.firstElementChild.classList.add('isActive')
   })
 })
+
+// Nav link active with scroll
+const sections = document.querySelectorAll('section[id]')
+
+const scrollActive = () => {
+  const scrollY = window.scrollY
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight
+    const sectionTop = current.offsetTop - 130
+
+    let sectionId = current.getAttribute('id')
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(`.Navbar-item a[href*=${sectionId}]`)
+        .classList.add('isActive')
+    } else {
+      document
+        .querySelector(`.Navbar-item a[href*=${sectionId}]`)
+        .classList.remove('isActive')
+    }
+  })
+}
+window.addEventListener('scroll', scrollActive)
+
+// scroll up
+const scrollUp = (event) => {
+  const btnUp = document.querySelector('.scroll-up')
+  if (event.currentTarget.scrollY >= 500) {
+    btnUp.classList.add('isActive')
+  } else {
+    btnUp.classList.remove('isActive')
+  }
+}
+window.addEventListener('scroll', scrollUp)
