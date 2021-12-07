@@ -1,13 +1,4 @@
-export type IconType = {
-  svg: string
-  png: string
-  webp: string
-}
-
-export type ImageType = {
-  png: string
-  webp: string
-}
+import { IconType, ImageType } from '../utils/Types'
 
 export type Technology = {
   name: string

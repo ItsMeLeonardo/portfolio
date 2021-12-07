@@ -1,7 +1,8 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-import type { ImageType, Technology } from './types'
+import type { Technology } from './types'
+import type { ImageType } from '../utils/Types'
 
 @customElement('project-card')
 export class ProjectCard extends LitElement {
