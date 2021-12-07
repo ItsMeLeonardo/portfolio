@@ -1,0 +1,61 @@
+{
+  "skills": {
+    "types": {
+      "master": {
+        "title": "Technologies I master",
+        "technologies": [
+          {
+            "name": "HTML5",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+            "icon": {
+              "svg": "html.svg",
+              "png": "html.png",
+              "webp": "html.webp"
+            }
+          },
+          {
+            "name": "CSS3",
+            "url": "https://www.w3.org/Style/CSS/Overview.en.html",
+            "icon": {
+              "svg": "css.svg",
+              "png": "css.png",
+              "webp": "css.webp"
+            }
+          },
+          {
+            "name": "JavaScript",
+            "url": "https://www.javascript.com/",
+            "icon": {
+              "svg": "js.svg",
+              "png": "js.png",
+              "webp": "js.webp"
+            }
+          },
+          {
+            "name": "React",
+            "url": "https://reactjs.org/",
+            "icon": {
+              "svg": "react.svg",
+              "png": "react.png",
+              "webp": "react.webp"
+            }
+          }
+        ]
+      },
+      "learning": {
+        "title": "I have worked with",
+        "technologies": [
+          {
+          }
+        ]
+      },
+      "future": {
+        "title": "I would like to learn",
+        "technologies": [
+          {
+          }
+        ]
+      }
+    }
+  }
+}
