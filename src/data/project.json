@@ -1,0 +1,54 @@
+{
+  "projects": [
+    {
+      "title": "My Films",
+      "image": {
+        "png": "my-films.png",
+        "webp": "my-films.webp"
+      },
+      "technologies": [
+        {
+          "name": "HTML5",
+          "icon": {
+            "svg": "html.svg",
+            "png": "html.png",
+            "webp": "html.webp"
+          }
+        },
+        {
+          "name": "CSS3",
+          "icon": {
+            "svg": "css.svg",
+            "png": "css.png",
+            "webp": "css.webp"
+          }
+        },
+        {
+          "name": "JavaScript",
+          "icon": {
+            "svg": "js.svg",
+            "png": "js.png",
+            "webp": "js.webp"
+          }
+        },
+        {
+          "name": "Figma",
+          "icon": {
+            "svg": "figma.svg",
+            "png": "figma.png",
+            "webp": "figma.webp"
+          }
+        },
+        {
+          "name": "React",
+          "icon": {
+            "svg": "react.svg",
+            "png": "react.png",
+            "webp": "react.webp"
+          }
+        }
+      ],
+      "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel"
+    }
+  ]
+}

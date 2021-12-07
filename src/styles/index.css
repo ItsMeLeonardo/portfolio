@@ -297,6 +297,7 @@ textarea {
     width: 100%;
     padding: 1rem 0;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .Navbar-link {
@@ -813,9 +814,9 @@ textarea {
 
     .Navbar-Left {
         justify-content: flex-start;
-        gap: .75rem
+        gap: .75rem;
+        width: 40%
     }
-
         .Navbar-Left .Navbar-logo-text {
             font-weight: bold;
         }
@@ -823,6 +824,7 @@ textarea {
     .Navbar-right {
         display: flex;
         flex-direction: row;
+        width: 60%;
     }
 
     .open-mobile {
