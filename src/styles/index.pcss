@@ -193,6 +193,13 @@ textarea {
     justify-content: center;
     align-items: center;
     transition: var(--transition);
+    & img {
+        --size: 100%;
+        width: var(--size);
+        height: var(--size);
+        object-fit: cover;
+        background-position: center;
+    }
 }
 
 .titleSection {
@@ -475,6 +482,9 @@ textarea {
         top: 4rem;
         transition: top var(--transition);
         transition-delay: var(--delay);
+        & img {
+            --size: 24px;
+        }
     }
 
     & .IconContent:nth-child(1) {
@@ -607,6 +617,8 @@ textarea {
 .Skill-item {
     position: relative;
     border-radius: var(--small-radius);
+    box-shadow: 0 0 0 transparent;
+    transition: box-shadow var(--transition);
 
     &:hover .skill-name {
         bottom: .5rem;
@@ -619,6 +631,9 @@ textarea {
 
     &:hover {
         box-shadow: var(--pale-dark-shadow);
+    }
+    &:active {
+        box-shadow: inset 0 0 1.2rem rgba(42, 42, 42, 0.1);
     }
 }
 

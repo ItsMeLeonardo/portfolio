@@ -198,8 +198,17 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: var(--transition);
+    transition: var(--transition)
 }
+
+.IconContent img {
+        --size: 100%;
+        width: var(--size);
+        height: var(--size);
+        -o-object-fit: cover;
+           object-fit: cover;
+        background-position: center;
+    }
 
 .titleSection {
     font: var(--section-title);
@@ -487,8 +496,12 @@ textarea {
         position: relative;
         top: 4rem;
         transition: top var(--transition);
-        transition-delay: var(--delay);
+        transition-delay: var(--delay)
     }
+
+.Project-tech .IconContent img {
+            --size: 24px;
+        }
 
 .Project-tech .IconContent:nth-child(1) {
         --delay: 0.1s;
@@ -620,7 +633,9 @@ textarea {
 
 .Skill-item {
     position: relative;
-    border-radius: var(--small-radius)
+    border-radius: var(--small-radius);
+    box-shadow: 0 0 0 transparent;
+    transition: box-shadow var(--transition)
 }
 
 .Skill-item:hover .skill-name {
@@ -634,6 +649,10 @@ textarea {
 
 .Skill-item:hover {
         box-shadow: var(--pale-dark-shadow);
+    }
+
+.Skill-item:active {
+        box-shadow: inset 0 0 1.2rem rgba(42, 42, 42, 0.1);
     }
 
 /* ---- Hobbies ---- */

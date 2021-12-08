@@ -14,6 +14,7 @@ export class SkillContent extends LitElement {
 
   render() {
     return html`
+      <link rel="stylesheet" href="src/styles/index.css" />
       <div class="Skills-content">
         <skill-list .skills=${this.skills.types.master}></skill-list>
         <skill-list .skills=${this.skills.types.learning}></skill-list>

@@ -46,7 +46,7 @@
         "title": "I have worked with",
         "technologies": [
           {
-            "name": "Apollo Server",
+            "name": "Apollo",
             "url": "https://www.apollographql.com/",
             "icon": {
               "svg": "apollo-server.svg",

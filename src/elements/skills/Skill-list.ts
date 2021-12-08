@@ -12,19 +12,18 @@ export class SkillList extends LitElement {
 
   render() {
     return html`
+      <link rel="stylesheet" href="src/styles/index.css" />
       <article class="Skills-type">
         <header class="skills-title">
           <h3 class="skills-title">${this.skills?.title}</h3>
           <ul class="Skills-list">
             ${this.skills?.technologies.map(
               (skill) => html`
-                <li class="Skill-item">
-                  <skill-item
-                    .name=${skill.name}
-                    .url=${skill.url}
-                    .icon=${skill.icon}
-                  />
-                </li>
+                <skill-item
+                  .name=${skill.name}
+                  .url=${skill.url}
+                  .icon=${skill.icon}
+                />
               `,
             )}
           </ul>
