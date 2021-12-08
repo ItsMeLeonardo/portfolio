@@ -1,7 +1,45 @@
 import { css } from 'lit'
 
+import { tabletGlobalStyles } from './tablet-global-styles'
 export const globalStyles = [
   css`
+    *,
+    ::after,
+    ::before {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      border: none;
+      list-style: none;
+      text-decoration: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--main-font);
+      background: var(--main-bg);
+      scroll-behavior: smooth;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    ::-moz-selection {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    ::selection {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    textarea {
+      resize: none;
+    }
     /* ---- glass effect ---- */
     .glass-light {
       -webkit-backdrop-filter: blur(6px) saturate(120%) contrast(45%)
@@ -97,4 +135,5 @@ export const globalStyles = [
       text-align: center;
     }
   `,
+  tabletGlobalStyles,
 ]

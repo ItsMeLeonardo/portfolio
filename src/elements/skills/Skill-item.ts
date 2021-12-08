@@ -1,12 +1,16 @@
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
+import { styles } from './styles'
+
 import type { IconType } from '../utils/Types'
 
 const iconsPath = '/icons'
 
 @customElement('skill-item')
 export class SkillItem extends LitElement {
+  static styles = styles
+
   @property({ type: String })
   name = ''
 
@@ -18,7 +22,6 @@ export class SkillItem extends LitElement {
 
   render() {
     return html`
-      <link rel="stylesheet" href="src/styles/index.css" />
       <li class="Skill-item">
         <a href="${this.url}" target="_blank">
           <figure class="skill-data">

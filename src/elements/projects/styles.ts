@@ -1,5 +1,6 @@
 import { css } from 'lit'
 import { globalStyles } from '../utils/Global-styles'
+import { responsiveStyles } from './responsive-styles'
 
 export const styles = [
   css`
@@ -115,4 +116,5 @@ export const styles = [
     }
   `,
   globalStyles,
+  responsiveStyles,
 ]
