@@ -23,3 +23,9 @@ export class SkillContent extends LitElement {
     `
   }
 }
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'skill-content': SkillContent
+  }
+}

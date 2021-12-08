@@ -114,7 +114,7 @@ textarea {
 /* ---- glass effect ---- */
 .glass-light {
     -webkit-backdrop-filter: blur(6px) saturate(120%) contrast(45%) brightness(130%);
-            backdrop-filter: blur(6px) saturate(120%) contrast(45%) brightness(130%);
+    backdrop-filter: blur(6px) saturate(120%) contrast(45%) brightness(130%);
     background: var(--white-to-glass);
 }
 
@@ -202,13 +202,13 @@ textarea {
 }
 
 .IconContent img {
-        --size: 100%;
-        width: var(--size);
-        height: var(--size);
-        -o-object-fit: cover;
-           object-fit: cover;
-        background-position: center;
-    }
+    --size: 100%;
+    width: var(--size);
+    height: var(--size);
+    -o-object-fit: cover;
+    object-fit: cover;
+    background-position: center;
+}
 
 .titleSection {
     font: var(--section-title);
@@ -389,8 +389,12 @@ textarea {
 }
 
 .SocialMedia-icon:hover {
-        transform: scale(1.2);
-    }
+    transform: scale(1.2);
+}
+
+.SocialMedia-icon img {
+    --size: 24px;
+}
 
 .Hero-image {
     position: absolute;
@@ -402,13 +406,13 @@ textarea {
 }
 
 .Hero-image img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: center;
-           object-position: center;
-    }
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
 
 @media (min-width: 425px) {
     .Hero-image {
@@ -423,7 +427,6 @@ textarea {
     font: var(--phrase);
     padding: 0 15%;
     letter-spacing: 0.03rem;
-//margin: 2rem 0;
 }
 
 /* ---- about ---- */
@@ -432,19 +435,15 @@ textarea {
     text-align: center;
 }
 
-.About-content {
-//margin-top: 1rem; padding: 0 1.5rem;
-}
-
 /* ---- My projects ----*/
 .Projects {
     width: 100%;
-//margin-top: 2rem; display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
 
+/*
 .Projects-content {
     display: flex;
     justify-content: center;
@@ -467,19 +466,19 @@ textarea {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: center;
-       object-position: center
+    object-position: center
 }
 
 .ProjectCard-image img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: center;
-           object-position: center;
-    }
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
 
 .Project-tech {
     display: flex;
@@ -490,38 +489,38 @@ textarea {
 }
 
 .Project-tech .IconContent {
-        --delay: 0;
-        --size: 40px;
-        border-radius: var(--small-radius);
-        position: relative;
-        top: 4rem;
-        transition: top var(--transition);
-        transition-delay: var(--delay)
-    }
+    --delay: 0;
+    --size: 40px;
+    border-radius: var(--small-radius);
+    position: relative;
+    top: 4rem;
+    transition: top var(--transition);
+    transition-delay: var(--delay)
+}
 
 .Project-tech .IconContent img {
-            --size: 24px;
-        }
+    --size: 24px;
+}
 
 .Project-tech .IconContent:nth-child(1) {
-        --delay: 0.1s;
-    }
+    --delay: 0.1s;
+}
 
 .Project-tech .IconContent:nth-child(2) {
-        --delay: 0.2s;
-    }
+    --delay: 0.2s;
+}
 
 .Project-tech .IconContent:nth-child(3) {
-        --delay: 0.3s;
-    }
+    --delay: 0.3s;
+}
 
 .Project-tech .IconContent:nth-child(4) {
-        --delay: 0.4s;
-    }
+    --delay: 0.4s;
+}
 
 .Project-tech .IconContent:nth-child(5) {
-        --delay: 0.5s;
-    }
+    --delay: 0.5s;
+}
 
 .ProjectCard:hover .Project-tech .IconContent {
     top: 0;
@@ -540,25 +539,25 @@ textarea {
 }
 
 .ProjectCard-footer .Button--link {
-        opacity: .4;
-    }
+    opacity: .4;
+}
 
 .ProjectCard-footer:hover .Button--link {
-        opacity: 1;
-    }
+    opacity: 1;
+}
 
 .ProjectCard-footer:hover .IconContent {
-        transform: translateX(.25rem);
-    }
+    transform: translateX(.25rem);
+}
 
 .ProjectCard-title {
     font: var(--subtitle);
     margin-left: 0.5rem;
 }
 
+*/
 /* ---- skills ---- */
 .Skills {
-//margin-top: 2rem; display: block;
     text-align: center;
 }
 
@@ -615,13 +614,13 @@ textarea {
 }
 
 .skill-icon img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: center;
-           object-position: center;
-    }
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
 
 .skill-name {
     font: var(--card-small-title);
@@ -639,25 +638,24 @@ textarea {
 }
 
 .Skill-item:hover .skill-name {
-        bottom: .5rem;
-    }
+    bottom: .5rem;
+}
 
 .Skill-item:hover .skill-icon {
-        --size: 40px;
-        transform: translateY(-.5rem);
-    }
+    --size: 40px;
+    transform: translateY(-.5rem);
+}
 
 .Skill-item:hover {
-        box-shadow: var(--pale-dark-shadow);
-    }
+    box-shadow: var(--pale-dark-shadow);
+}
 
 .Skill-item:active {
-        box-shadow: inset 0 0 1.2rem rgba(42, 42, 42, 0.1);
-    }
+    box-shadow: inset 0 0 1.2rem rgba(42, 42, 42, 0.1);
+}
 
 /* ---- Hobbies ---- */
 .Hobbies {
-//margin-top: 2rem; display: block;
     text-align: center;
 }
 
@@ -690,7 +688,6 @@ textarea {
 /* ---- contact me ---- */
 
 .Contact-content {
-//margin-top: 1rem; width: 100%;
     background: var(--white);
     border-radius: var(--large-radius) var(--large-radius) 0 0;
     padding: 1rem 10% 4rem 10%;
@@ -748,8 +745,8 @@ textarea {
 }
 
 .Form-input:focus {
-        border: 2px solid var(--primary);
-    }
+    border: 2px solid var(--primary);
+}
 
 .Form-input:focus + .Form-label {
     left: -100%;
@@ -779,13 +776,13 @@ textarea {
 }
 
 .Form-icon img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: center;
-           object-position: center;
-    }
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
 
 /* media queries TABLET*/
 @media (min-width: 768px) {
@@ -824,9 +821,9 @@ textarea {
         flex-direction: row
     }
 
-        .Navbar .icon-open, .Navbar .icon-close {
-            display: none;
-        }
+    .Navbar .icon-open, .Navbar .icon-close {
+        display: none;
+    }
 
     .Navbar-Left {
         justify-content: flex-start;
@@ -834,9 +831,9 @@ textarea {
         width: 40%
     }
 
-        .Navbar-Left .Navbar-logo-text {
-            font-weight: bold;
-        }
+    .Navbar-Left .Navbar-logo-text {
+        font-weight: bold;
+    }
 
     .Navbar-right {
         display: flex;
@@ -859,12 +856,12 @@ textarea {
         height: var(--size)
     }
 
-        .icon-download img {
-            width: 100%;
-            -o-object-fit: cover;
-               object-fit: cover;
-            height: 100%;
-        }
+    .icon-download img {
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: 100%;
+    }
 
     .Hero-text {
         white-space: nowrap;

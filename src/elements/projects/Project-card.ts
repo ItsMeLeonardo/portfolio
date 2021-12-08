@@ -2,14 +2,16 @@ import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
 import '../utils/Icon-Picture'
+import { styles } from './styles'
 
 import type { Technology } from './types'
 import type { ImageType } from '../utils/Types'
 
+const imagePath = '/images'
+const iconPath = '/icons'
 @customElement('project-card')
 export class ProjectCard extends LitElement {
-  private imagePath: string = '/images'
-  private iconPath: string = '/icons'
+  static styles = styles
 
   @property({ type: String })
   title = ''
@@ -22,15 +24,14 @@ export class ProjectCard extends LitElement {
 
   render() {
     return html`
-      <link rel="stylesheet" href="src/styles/index.css" />
       <div class="ProjectCard">
         <picture class="ProjectCard-image">
           <source
             type="image/webp"
-            srcset="${this.imagePath}/png/${this.image?.png}"
+            srcset="${imagePath}/png/${this.image?.png}"
           />
           <img
-            src="${this.imagePath}/webp/${this.image?.webp}"
+            src="${imagePath}/webp/${this.image?.webp}"
             alt="${this.title} screen demo"
           />
         </picture>
@@ -41,14 +42,14 @@ export class ProjectCard extends LitElement {
               <picture class="glass-light IconContent">
                 <source
                   type="image/png"
-                  srcset="${this.iconPath}/png/${technology.icon.png}"
+                  srcset="${iconPath}/png/${technology.icon.png}"
                 />
                 <source
                   type="image/webp"
-                  srcset="${this.iconPath}/webp/${technology.icon.webp}"
+                  srcset="${iconPath}/webp/${technology.icon.webp}"
                 />
                 <img
-                  src="${this.iconPath}/svg/${technology.icon.svg}"
+                  src="${iconPath}/svg/${technology.icon.svg}"
                   alt="${technology.name}"
                 />
               </picture>
