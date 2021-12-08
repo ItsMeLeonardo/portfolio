@@ -11,9 +11,9 @@
     "types"
   ],
   "scripts": {
-    "css": "postcss src/styles/index.pcss -o src/styles/index.css",
+    "css": "postcss src/styles/main.pcss -o src/styles/index.css",
     "dev": "vite",
-    "post": "postcss --watch src/styles/index.pcss -o src/styles/index.css",
+    "post": "postcss --watch src/styles/main.pcss -o src/styles/index.css",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "deploy": "vercel",
