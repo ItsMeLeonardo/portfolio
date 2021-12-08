@@ -13,8 +13,8 @@ export class ProjectContent extends LitElement {
   projects: Project[] = data.projects
 
   render() {
-    console.log(this.projects)
     return html`
+      <link rel="stylesheet" href="src/styles/index.css" />
       <article class="Projects-content">
         ${this.projects.map(
           (project: Project) => html`

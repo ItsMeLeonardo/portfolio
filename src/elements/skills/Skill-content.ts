@@ -16,6 +16,8 @@ export class SkillContent extends LitElement {
     return html`
       <div class="Skills-content">
         <skill-list .skills=${this.skills.types.master}></skill-list>
+        <skill-list .skills=${this.skills.types.learning}></skill-list>
+        <skill-list .skills=${this.skills.types.future}></skill-list>
       </div>
     `
   }

@@ -1,5 +1,7 @@
-import { LitElement, html } from 'lit'
+import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
+
+import '../utils/Icon-Picture'
 
 import type { Technology } from './types'
 import type { ImageType } from '../utils/Types'
@@ -11,43 +13,62 @@ export class ProjectCard extends LitElement {
 
   @property({ type: String })
   title = ''
+
   @property()
   image: ImageType | undefined
+
   @property()
   technologies: Technology[] = []
 
   render() {
-    console.log({ tech: this.technologies })
-    return html`<div class="ProjectCard">
-      <picture class="ProjectCard-image">
-        <img
-          src="${this.imagePath}/png/${this.image?.png}"
-          alt="${this.title} screen demo"
-        />
-      </picture>
+    return html`
+      <link rel="stylesheet" href="src/styles/index.css" />
+      <div class="ProjectCard">
+        <picture class="ProjectCard-image">
+          <source
+            type="image/webp"
+            srcset="${this.imagePath}/png/${this.image?.png}"
+          />
+          <img
+            src="${this.imagePath}/webp/${this.image?.webp}"
+            alt="${this.title} screen demo"
+          />
+        </picture>
 
-      <aside class="Project-tech">
-        ${this.technologies.map(
-          (technology) => html`
-            <picture class="glass-light IconContent">
-              <img
-                src="${this.iconPath}/svg/${technology.icon.svg}"
-                alt="${technology.name}"
-              />
-            </picture>
-          `,
-        )}
-      </aside>
+        <aside class="Project-tech">
+          ${this.technologies.map(
+            (technology) => html`
+              <picture class="glass-light IconContent">
+                <source
+                  type="image/png"
+                  srcset="${this.iconPath}/png/${technology.icon.png}"
+                />
+                <source
+                  type="image/webp"
+                  srcset="${this.iconPath}/webp/${technology.icon.webp}"
+                />
+                <img
+                  src="${this.iconPath}/svg/${technology.icon.svg}"
+                  alt="${technology.name}"
+                />
+              </picture>
+            `,
+          )}
+        </aside>
 
-      <footer class="ProjectCard-footer glass-light">
-        <h3 class="ProjectCard-title">My films</h3>
-        <a href="#" class="Button Button--link">
-          See details
-          <picture class="IconContent">
-            <img src="${this.iconPath}/svg/arrow-right.svg" alt="arrow right" />
-          </picture>
-        </a>
-      </footer>
-    </div>`
+        <footer class="ProjectCard-footer glass-light">
+          <h3 class="ProjectCard-title">${this.title}</h3>
+          <a href="#" class="Button Button--link">
+            See details
+
+            <icon-picture
+              paramIcon="arrow-right"
+              alt="arrow right"
+              className="IconContent"
+            />
+          </a>
+        </footer>
+      </div>
+    `
   }
 }
