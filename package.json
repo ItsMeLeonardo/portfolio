@@ -14,7 +14,10 @@
     "css": "postcss src/styles/index.pcss -o src/styles/index.css",
     "dev": "vite",
     "post": "postcss --watch src/styles/index.pcss -o src/styles/index.css",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "deploy": "vercel",
+    "production": "vercel --prod"
   },
   "dependencies": {
     "lit": "^2.0.0"
