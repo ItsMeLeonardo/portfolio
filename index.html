@@ -5,10 +5,11 @@
   <title>DaLeo | It's me leonardo</title>
   <link rel="stylesheet" href="/src/styles/index.css">
   <script type="module" src="/src/my-elements.ts" defer></script>
-  <script src="/scripts/navbar.js" defer></script>
+  <script src="/scripts/hide-show.js" defer></script>
 
   <meta name="application-name" content="Leonardo's Portfolio">
-  <meta name="description" content="In this page life Leonardo's Portfolio, I'm a passionated web developer, I like Front-end with react ">
+  <meta name="description"
+        content="In this page life Leonardo's Portfolio, I'm a passionated web developer, I like Front-end with react ">
 
   <meta name="msapplication-TileColor" content="#f1f1f1">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -25,7 +26,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -34,6 +35,7 @@
 
 </head>
 <body>
+
 <main class="container">
   <!-- ---- NAVBAR ----    -->
   <nav class="NavbarContent">
@@ -81,7 +83,6 @@
       </ul>
     </header>
   </nav>
-
   <!-- ---- HERO ----    -->
   <section class="Hero">
     <article class="Hero-data">
@@ -155,7 +156,8 @@
     </header>
     <article class="About-content">
       <p class="paragraph">Hi 👋, I’m a web developer, I like the frontend, I really enjoy making web pages and I like
-        to follow the best practices (clean code, user experience), I like discover new technologies, new ways to solve
+        to follow the best practices (clean code, user experience), I like discover new technologies, new ways to
+        solve
         a problem, I always seek to diversify my knowledge, to be prepared for future challenges.</p>
     </article>
   </section>
@@ -268,5 +270,119 @@
     <img src="icons/svg/arrow-up.svg" alt="">
   </picture>
 </a>
+
+<!-- ---- MODAL DETAIL ---- -->
+<section class="Modal-layout hidden">
+  <div class="Modal glass-light">
+    <header class="Modal-header">
+      <h2 class="Modal-title">
+        Project Detail
+      </h2>
+
+      <picture class="close-modal">
+        <img class="icon" src="/icons/svg/close.svg" alt="close menu">
+      </picture>
+    </header>
+
+    <article class="Modal-body">
+
+      <div class="Modal-section">
+        <div class="Detail-screens-content">
+
+          <div class="Detail-screens">
+            <label for="screen-1" class="Detail-screen">
+              <input class="Detail-input" type="radio" name="detail-screen" id="screen-1" checked>
+              <picture class="Detail-img">
+                <img src="images/png/GP-screen-1.png" alt="my films project">
+              </picture>
+            </label>
+
+            <label for="screen-2" class="Detail-screen">
+              <input class="Detail-input" type="radio" name="detail-screen" id="screen-2">
+              <picture class="Detail-img">
+                <img src="images/png/GP-screen-2.png" alt="my films project">
+              </picture>
+            </label>
+
+            <label for="screen-3" class="Detail-screen">
+              <input class="Detail-input" type="radio" name="detail-screen" id="screen-3">
+              <picture class="Detail-img">
+                <img src="images/png/GP-screen-3.png" alt="my films project">
+              </picture>
+            </label>
+
+            <label for="screen-4" class="Detail-screen">
+              <input class="Detail-input" type="radio" name="detail-screen" id="screen-4">
+              <picture class="Detail-img">
+                <img src="images/png/GP-screen-4.png" alt="my films project">
+              </picture>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="Modal-section">
+        <h2 class="Detail-title">
+          Gift Party
+        </h2>
+
+        <div class="Detail-Buttons">
+          <button class="Button Button--primary">
+            View Website
+            <picture class="IconContent">
+              <img src="icons/svg/eye.svg" alt="Eye icon">
+            </picture>
+          </button>
+          <button class="Button Button--gray">
+            View Code
+            <picture class="IconContent">
+              <img src="icons/svg/github.svg" alt="Code icon">
+            </picture>
+          </button>
+        </div>
+
+        <div class="Detail-description">
+          <h3 class="Detail-subTitle">About this project</h3>
+          <p class="Detail-paragraph">
+            This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where
+            tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility,
+            asynchronism in Javascript, considering the user experience and performance, finally the deployment in
+            vercel
+          </p>
+        </div>
+
+        <div class="Detail-description">
+          <h3 class="Detail-subTitle">Soft Skills</h3>
+
+          <ul class="Badges-list">
+            <li class="Badge-item">
+              <span class="Badges-content">
+                Creative
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Detail-description">
+          <h3 class="Detail-subTitle">Technologies</h3>
+
+          <ul class="Badges-list">
+            <li class="Badge-item">
+            <span class="Badges-content">
+              React
+            </span>
+              <picture class="IconContent">
+                <img src="icons/svg/react.svg" alt="react">
+              </picture>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </article>
+  </div>
+</section>
+
 </body>
 </html>

@@ -38,6 +38,7 @@
     --btn-size: .75rem;
     --phrase-size: 1.25rem;
     --paragraph-size: .875rem;
+    --detail-size: 2rem;
 
     --paragraph: var(--paragraph-size) var(--main-font);
     --hero-text: var(--hero-size) var(--main-font-bold);
@@ -45,7 +46,8 @@
     --section-title: bold 1.5rem var(--main-font-bold);
     --subtitle: bold 1rem var(--main-font-bold);
     --btn-font: var(--btn-size) var(--main-font);
-    --project-title-detail: bold 2rem var(--main-font);
+    --project-title-detail: bold var(--detail-size) var(--main-font-bold);
+    --project-subtitle-detail: 1.5rem var(--main-font-bold);
     --project-title-card: bold 1rem var(--main-font);
     --card-small-title: bold .85rem var(--main-font);
     --bagde-font: var(--btn-font);
@@ -56,7 +58,8 @@
     --primary-shadow: 0 32px 40px -12px rgba(255, 142, 60, 0.35);
     --secondary-shadow: 0 32px 40px -12px rgba(42, 42, 42, 0.35);
     --dark-shadow: 0 32px 40px -12px rgba(42, 42, 42, 0.35);
-    --btn-active-shadow: inset 0px 0.1em 0.6em #e0623c;
+    --btn-active-shadow-primary: inset 0px 0.1em 0.6em #e0623c;
+    --btn-active-shadow-gray: inset 0px 0.1em 0.6em #b0b0b0;
     --btn-hover-shadow: 0 0 0 transparent;
 
     /* ---- border-radius ----*/
@@ -114,7 +117,7 @@ textarea {
 /* ---- glass effect ---- */
 .glass-light {
     -webkit-backdrop-filter: blur(6px) saturate(120%) contrast(45%) brightness(130%);
-    backdrop-filter: blur(6px) saturate(120%) contrast(45%) brightness(130%);
+            backdrop-filter: blur(6px) saturate(120%) contrast(45%) brightness(130%);
     background: var(--white-to-glass);
 }
 
@@ -136,21 +139,25 @@ textarea {
     box-shadow: var(--btn-hover-shadow);
 }
 
-.Button:active {
-    box-shadow: var(--btn-active-shadow);
-}
-
 .Button--primary {
     background: var(--primary);
     color: var(--white);
-    box-shadow: var(--primary-shadow);
+    box-shadow: var(--primary-shadow)
 }
 
-.Button--secondary {
-    background: var(--secondary);
+.Button--primary:active {
+        box-shadow: var(--btn-active-shadow-primary);
+    }
+
+.Button--gray {
+    background: var(--gray);
     color: var(--text);
-    box-shadow: var(--secondary-shadow);
+    box-shadow: var(--secondary-shadow)
 }
+
+.Button--gray:active {
+        box-shadow: var(--btn-active-shadow-gray);
+    }
 
 .Button--link {
     background: transparent;
@@ -202,13 +209,13 @@ textarea {
 }
 
 .IconContent img {
-    --size: 100%;
-    width: var(--size);
-    height: var(--size);
-    -o-object-fit: cover;
-    object-fit: cover;
-    background-position: center;
-}
+        --size: 100%;
+        width: var(--size);
+        height: var(--size);
+        -o-object-fit: cover;
+           object-fit: cover;
+        background-position: center;
+    }
 
 .titleSection {
     font: var(--section-title);
@@ -274,7 +281,7 @@ textarea {
     color: var(--text);
 }
 
-.icon-open, .icon-close {
+.icon-open, .icon-close, .close-modal {
     padding: .5rem;
     border-radius: var(--small-radius);
 }
@@ -283,7 +290,7 @@ textarea {
     background: var(--primary)
 }
 
-.icon-close {
+.icon-close, .close-modal {
     background: var(--secondary)
 }
 
@@ -389,12 +396,12 @@ textarea {
 }
 
 .SocialMedia-icon:hover {
-    transform: scale(1.2);
-}
+        transform: scale(1.2);
+    }
 
 .SocialMedia-icon img {
-    --size: 24px;
-}
+        --size: 24px;
+    }
 
 .Hero-image {
     position: absolute;
@@ -406,13 +413,13 @@ textarea {
 }
 
 .Hero-image img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-}
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
+    }
 
 @media (min-width: 425px) {
     .Hero-image {
@@ -539,8 +546,8 @@ textarea {
 }
 
 .Form-input:focus {
-    border: 2px solid var(--primary);
-}
+        border: 2px solid var(--primary);
+    }
 
 .Form-input:focus + .Form-label {
     left: -100%;
@@ -570,13 +577,204 @@ textarea {
 }
 
 .Form-icon img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
+    }
+
+/* ---- modal detail ----*/
+.Modal-layout {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: var(--front);
+    top: 0;
+    left: 0;
+}
+
+.Modal {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
+    padding: 1rem .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    overflow: scroll;
 }
+
+.Modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Modal-title {
+    font-size: 1.5rem;
+}
+
+.close-modal {
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    padding: 0.25rem;
+    justify-content: center;
+    align-items: center
+}
+
+.close-modal img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
+    }
+
+.Modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.Modal-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ---- Project detail ---- */
+.Detail-title {
+    font: var(--project-title-detail);
+}
+
+.Detail-screens-content {
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Detail-screens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    padding: 0 .5rem .5rem .5rem;
+    gap: .75rem;
+    grid-template-rows: 40px;
+}
+
+.Detail-screens input {
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        display: none;
+    }
+
+.Detail-screens {
+
+    background: var(--white);
+}
+
+.Detail-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: var(--front)
+}
+
+.Detail-img img {
+        transition: transform var(--transition);
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
+    }
+
+
+.Detail-screen img {
+    border: 2px solid var(--primary);
+    cursor: pointer;
+}
+.Detail-img::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(41, 41, 41, 0.358333) 72.4%, rgba(42, 42, 42, 0.5) 100%);
+    mix-blend-mode: darken;
+    transition: opacity var(--transition);
+}
+
+.Detail-input:checked ~ .Detail-img {
+    box-shadow: var(--pale-dark-shadow);
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    pointer-events: none
+}
+
+.Detail-input:checked ~ .Detail-img img {
+        border: none;
+    }
+
+.Detail-input:checked ~ .Detail-img::after {
+        opacity: 1;
+    }
+
+.Detail-Buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around
+}
+
+.Detail-Buttons .IconContent {
+        --size: 1.5rem;
+    }
+
+.Detail-subTitle {
+    font: var(--project-subtitle-detail);
+}
+
+.Detail-description {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+/* BADGE*/
+.Badges-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.Badge-item {
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    background: var(--white);
+    font-size: 1rem;
+    box-shadow: var(--pale-dark-shadow);
+    display: flex;
+    gap: .5rem;
+    align-items: center
+}
+.Badge-item .IconContent{
+        --size: 1rem;
+    }
 
 /* media queries TABLET*/
 @media (min-width: 768px) {
@@ -586,6 +784,7 @@ textarea {
         --btn-size: 1rem;
         --phrase-size: 1.75rem;
         --paragraph-size: 1rem;
+        --detail-size: 40px;
 
         /* ---- container ---- */
         --padding-container: 1rem;
@@ -615,9 +814,9 @@ textarea {
         flex-direction: row
     }
 
-    .Navbar .icon-open, .Navbar .icon-close {
-        display: none;
-    }
+        .Navbar .icon-open, .Navbar .icon-close {
+            display: none;
+        }
 
     .Navbar-Left {
         justify-content: flex-start;
@@ -625,9 +824,9 @@ textarea {
         width: 40%
     }
 
-    .Navbar-Left .Navbar-logo-text {
-        font-weight: bold;
-    }
+        .Navbar-Left .Navbar-logo-text {
+            font-weight: bold;
+        }
 
     .Navbar-right {
         display: flex;
@@ -650,12 +849,12 @@ textarea {
         height: var(--size)
     }
 
-    .icon-download img {
-        width: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        height: 100%;
-    }
+        .icon-download img {
+            width: 100%;
+            -o-object-fit: cover;
+               object-fit: cover;
+            height: 100%;
+        }
 
     .Hero-text {
         white-space: nowrap;
@@ -680,6 +879,17 @@ textarea {
         line-height: 1.75rem;
     }
 
+    /* ---- My projects ---- */
+    .ProjectCard {
+        width: 316px;
+    }
+
+    /* ---- My skills ---- */
+    .Skills-content {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
     /* ---- Contact Me ---- */
     .Form-title {
         padding-top: .75rem;
@@ -700,6 +910,7 @@ textarea {
         /* ---- container ---- */
         --padding-container: 0rem;
         --hero-size: 60px;
+        --detail-size: 60px;
     }
 
     .section {
@@ -713,6 +924,17 @@ textarea {
     /* ---- about me ---- */
     .About-content {
         padding: 0 25%;
+    }
+
+    /* ---- My projects ---- */
+    .ProjectCard {
+        width: 380px;
+    }
+
+
+    /* ---- My skills ---- */
+    .Skills-type {
+        width: 380px;
     }
 
     /* ---- Hobbies ----*/

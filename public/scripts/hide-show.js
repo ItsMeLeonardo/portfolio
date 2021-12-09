@@ -1,5 +1,4 @@
-// open and close navbar
-
+/* ===== open and close navbar  ===== */
 const navbar = document.querySelector('.Navbar')
 const btnClose = document.querySelector('.icon-close')
 const btnOpen = document.querySelector('.icon-open')
@@ -54,7 +53,7 @@ const scrollActive = () => {
 }
 window.addEventListener('scroll', scrollActive)
 
-// scroll up
+/* ====== scroll up ===== */
 const scrollUp = (event) => {
   const btnUp = document.querySelector('.scroll-up')
   if (event.currentTarget.scrollY >= 500) {
@@ -64,3 +63,11 @@ const scrollUp = (event) => {
   }
 }
 window.addEventListener('scroll', scrollUp)
+
+/* ====== Open modal ===== */
+const hideModal = document.querySelector('.close-modal')
+const modalLayout = document.querySelector('.Modal-layout')
+
+hideModal.addEventListener('click', () => {
+  modalLayout.classList.add('hidden')
+})
