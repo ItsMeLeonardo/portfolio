@@ -27,6 +27,12 @@ export const globalStyles = [
       justify-content: center;
     }
 
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     ::-moz-selection {
       background: var(--primary);
       color: var(--white);
@@ -159,6 +165,23 @@ export const globalStyles = [
 
     .Badge-item-icon.IconContent {
       --size: 1rem;
+    }
+
+    /* ---- icon styles ---- */
+    .icon-size-1 {
+      --size: 1rem;
+      width: var(--size);
+      height: var(--size);
+    }
+    .icon-size-1-5 {
+      --size: 1.5rem;
+      width: var(--size);
+      height: var(--size);
+    }
+    .icon-size-2 {
+      --size: 2rem;
+      width: var(--size);
+      height: var(--size);
     }
   `,
   tabletGlobalStyles,

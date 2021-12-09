@@ -14,18 +14,21 @@ export class ModalLayout extends LitElement {
   static styles = styles
 
   @property()
-  open: boolean = true
-
-  @property()
   private projects: Project[] = projects.projects
 
   @property({ type: String })
-  titleProject = 'Gif Party'
+  titleProject = ''
 
-  toggleModal() {
-    console.log(this.open)
-    this.open = !this.open
-    this.requestUpdate()
+  @property({ type: Function })
+  toggleModal: Function = () => {}
+
+  @property({ type: Boolean })
+  isOpen = false
+
+  private hiddenModal() {
+    this.toggleModal()
+    this.isOpen = false
+    document.body.style.overflow = 'auto'
   }
 
   render() {
@@ -33,15 +36,14 @@ export class ModalLayout extends LitElement {
       (project) => project.title === this.titleProject,
     )
 
-    if (!this.open) {
-      console.log('close')
-      return
+    if (!this.isOpen) {
+      return null
     }
 
     return html`
       <section class="Modal-layout">
         <div class="Modal glass-light">
-          <header class="Modal-header" @click="${this.toggleModal}">
+          <header class="Modal-header" @click="${this.hiddenModal}">
             <h2 class="Modal-title">Project Detail</h2>
 
             <icon-picture

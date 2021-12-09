@@ -2,6 +2,7 @@ import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
 import '../utils/Icon-Picture'
+import '../modal/Modal-layout'
 import { styles } from './styles'
 
 import type { Technology } from './types'
@@ -22,7 +23,23 @@ export class ProjectCard extends LitElement {
   @property()
   technologies: Technology[] = []
 
+  @property()
+  showModal: boolean = false
+
+  toggleModal() {
+    this.showModal = !this.showModal
+    document.body.style.overflow = 'hidden'
+  }
+
   render() {
+    const modal = this.showModal
+      ? html`<modal-layout
+          titleProject="${this.title}"
+          .toggleModal=${this.toggleModal}
+          .isOpen=${this.showModal}
+        ></modal-layout>`
+      : null
+
     return html`
       <div class="ProjectCard">
         <picture class="ProjectCard-image">
@@ -59,13 +76,21 @@ export class ProjectCard extends LitElement {
 
         <footer class="ProjectCard-footer glass-light">
           <h3 class="ProjectCard-title">${this.title}</h3>
-          <button class="Button Button--link see-detail">
+          <button
+            class="Button Button--link see-detail"
+            @click="${this.toggleModal}"
+          >
             See details
 
-            <icon-picture paramIcon="arrow-right" alt="arrow right" />
+            <icon-picture
+              paramIcon="arrow-right"
+              alt="arrow right"
+              class="icon-size-1-5"
+            />
           </button>
         </footer>
       </div>
+      ${modal}
     `
   }
 }

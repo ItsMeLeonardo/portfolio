@@ -73,6 +73,7 @@ export const styles = [
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      text-align: start;
     }
 
     /* ---- Project detail ---- */
