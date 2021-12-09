@@ -586,6 +586,7 @@ textarea {
     }
 
 /* ---- modal detail ----*/
+
 .Modal-layout {
     position: fixed;
     width: 100%;
@@ -593,16 +594,19 @@ textarea {
     z-index: var(--front);
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .Modal {
+    max-width: var(--max-width);
     width: 100%;
     height: 100%;
     padding: 1rem .5rem;
     display: flex;
     flex-direction: column;
     gap: .75rem;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .Modal-header {
@@ -613,10 +617,12 @@ textarea {
 
 .Modal-title {
     font-size: 1.5rem;
+    color: var(--gray);
 }
 
 .close-modal {
     --size: 2rem;
+    cursor: pointer;
     width: var(--size);
     height: var(--size);
     display: flex;
@@ -705,6 +711,7 @@ textarea {
     border: 2px solid var(--primary);
     cursor: pointer;
 }
+
 .Detail-img::after {
     content: '';
     position: absolute;
@@ -762,6 +769,7 @@ textarea {
     flex-wrap: wrap;
     gap: .5rem;
 }
+
 .Badge-item {
     padding: .5rem .75rem;
     border-radius: .5rem;
@@ -772,7 +780,8 @@ textarea {
     gap: .5rem;
     align-items: center
 }
-.Badge-item .IconContent{
+
+.Badge-item .IconContent {
         --size: 1rem;
     }
 
@@ -902,6 +911,41 @@ textarea {
     .Form-field-group {
         flex-direction: row;
     }
+
+    /* ---- modal detail ---- */
+    .Modal {
+        padding: var(--padding-container);
+        gap: 1rem;
+    }
+
+    .Detail-screens-content {
+        height: 400px;
+    }
+
+    .Detail-screens {
+        padding: 0 1rem 1rem 1rem;
+        gap: 2rem;
+        grid-template-rows: 80px;
+    }
+
+    .Detail-img img {
+        border-radius: var(--small-radius);
+    }
+
+    .Detail-Buttons {
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Modal {
+        padding: 1rem 5rem;
+    }
+
+    .Detail-Buttons {
+        gap: 2.5rem;
+    }
 }
 
 /* ---- Desktop ---- */
@@ -940,6 +984,30 @@ textarea {
     /* ---- Hobbies ----*/
     .Hobbies-content {
         gap: 2rem;
+    }
+
+    /* ---- Modal ----*/
+    .Modal {
+        padding: 1rem;
+    }
+
+    .Modal-body {
+        flex-direction: row-reverse;
+        padding: 0;
+    }
+
+    .Modal-section.image {
+        width: 60%;
+    }
+
+    .Modal-section.info {
+        width: 40%;
+    }
+
+    .Detail-screens-content {
+        height: 450px;
+        border-radius: var(--large-radius);
+        overflow: hidden;
     }
 
 }
