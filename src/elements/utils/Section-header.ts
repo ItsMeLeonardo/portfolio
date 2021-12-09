@@ -7,8 +7,10 @@ export class SectionHeader extends LitElement {
   title: string = ''
 
   render() {
-    return html` <header class="titleSection">
-      <h2 class="Project-title">${this.title}</h2>
-    </header>`
+    return html`
+      <header class="titleSection">
+        <h2 class="Project-title">${this.title}</h2>
+      </header>
+    `
   }
 }

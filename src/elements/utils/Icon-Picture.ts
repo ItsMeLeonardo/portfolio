@@ -1,10 +1,14 @@
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
+import { styles } from '../modal/styles'
+
 const iconPath = '/icons'
 
 @customElement('icon-picture')
 export class IconPicture extends LitElement {
+  static styles = styles
+
   @property({ type: String })
   paramIcon = ''
 

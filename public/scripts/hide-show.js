@@ -63,11 +63,3 @@ const scrollUp = (event) => {
   }
 }
 window.addEventListener('scroll', scrollUp)
-
-/* ====== Open modal ===== */
-const hideModal = document.querySelector('.close-modal')
-const modalLayout = document.querySelector('.Modal-layout')
-
-hideModal.addEventListener('click', () => {
-  modalLayout.classList.add('hidden')
-})

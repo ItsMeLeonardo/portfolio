@@ -59,15 +59,11 @@ export class ProjectCard extends LitElement {
 
         <footer class="ProjectCard-footer glass-light">
           <h3 class="ProjectCard-title">${this.title}</h3>
-          <a href="#" class="Button Button--link">
+          <button class="Button Button--link see-detail">
             See details
 
-            <icon-picture
-              paramIcon="arrow-right"
-              alt="arrow right"
-              className="IconContent"
-            />
-          </a>
+            <icon-picture paramIcon="arrow-right" alt="arrow right" />
+          </button>
         </footer>
       </div>
     `

@@ -66,20 +66,24 @@ export const globalStyles = [
       box-shadow: var(--btn-hover-shadow);
     }
 
-    .Button:active {
-      box-shadow: var(--btn-active-shadow);
-    }
-
     .Button--primary {
       background: var(--primary);
       color: var(--white);
       box-shadow: var(--primary-shadow);
     }
 
-    .Button--secondary {
-      background: var(--secondary);
+    .Button--primary:active {
+      box-shadow: var(--btn-active-shadow-primary);
+    }
+
+    .Button--gray {
+      background: var(--gray);
       color: var(--text);
       box-shadow: var(--secondary-shadow);
+    }
+
+    .Button--gray:active {
+      box-shadow: var(--btn-active-shadow-gray);
     }
 
     .Button--link {
@@ -89,7 +93,6 @@ export const globalStyles = [
       font-size: 0.85rem;
       gap: 0.25rem;
     }
-
     /* ---- utils and global styles ----*/
     .hidden {
       display: none !important;
@@ -133,6 +136,29 @@ export const globalStyles = [
       margin-top: 4rem;
       display: block;
       text-align: center;
+    }
+
+    /* BADGE*/
+    .Badges-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .Badge-item {
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+      background: var(--white);
+      font-size: 1rem;
+      box-shadow: var(--pale-dark-shadow);
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .Badge-item-icon.IconContent {
+      --size: 1rem;
     }
   `,
   tabletGlobalStyles,

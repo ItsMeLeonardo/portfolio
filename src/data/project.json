@@ -6,6 +6,24 @@
         "png": "my-films.png",
         "webp": "my-films.webp"
       },
+      "screens": [
+        {
+          "png": "my-films-1.png",
+          "webp": "my-films-1.webp"
+        },
+        {
+          "png": "my-films-2.png",
+          "webp": "my-films-2.webp"
+        },
+        {
+          "png": "my-films-3.png",
+          "webp": "my-films-3.webp"
+        },
+        {
+          "png": "my-films-4.png",
+          "webp": "my-films-4.webp"
+        }
+      ],
       "technologies": [
         {
           "name": "HTML5",
@@ -48,7 +66,22 @@
           }
         }
       ],
-      "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel"
+      "softSkills": [
+        "UX",
+        "UI",
+        "Design",
+        "Front-end",
+        "React",
+        "Figma",
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel",
+      "links": {
+        "website": "https://my-films.vercel.app/",
+        "repo": "https://github.com/ItsMeLeonardo/my-films"
+      }
     },
     {
       "title": "Gif Party",
@@ -56,6 +89,24 @@
         "png": "my-films.png",
         "webp": "my-films.webp"
       },
+      "screens": [
+        {
+          "png": "gif-party-1.png",
+          "webp": "gif-party-1.webp"
+        },
+        {
+          "png": "gif-party-2.png",
+          "webp": "gif-party-2.webp"
+        },
+        {
+          "png": "gif-party-3.png",
+          "webp": "gif-party-3.webp"
+        },
+        {
+          "png": "gif-party-4.png",
+          "webp": "gif-party-4.webp"
+        }
+      ],
       "technologies": [
         {
           "name": "HTML5",
@@ -98,7 +149,22 @@
           }
         }
       ],
-      "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel"
+      "softSkills": [
+        "UX",
+        "UI",
+        "Design",
+        "Front-end",
+        "React",
+        "Figma",
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel",
+      "links": {
+        "website": "https://gift-party.vercel.app/",
+        "repo": "https://github.com/ItsMeLeonardo/gif-party"
+      }
     }
   ]
 }
