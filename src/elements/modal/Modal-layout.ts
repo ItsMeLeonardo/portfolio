@@ -36,6 +36,8 @@ export class ModalLayout extends LitElement {
       (project) => project.title === this.titleProject,
     )
 
+    console.log({ project })
+
     if (!this.isOpen) {
       return null
     }

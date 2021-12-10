@@ -69,13 +69,10 @@
       "softSkills": [
         "UX",
         "UI",
+        "atomic design",
         "Design",
         "Front-end",
-        "React",
-        "Figma",
-        "HTML5",
-        "CSS3",
-        "JavaScript"
+        "Creativity"
       ],
       "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel",
       "links": {
@@ -147,6 +144,97 @@
             "png": "react.png",
             "webp": "react.webp"
           }
+        },
+        {
+          "name": "zustand",
+          "icon": {
+            "svg": "zustand.svg",
+            "png": "zustand.png",
+            "webp": "zustand.webp"
+          }
+        }
+      ],
+      "softSkills": [
+        "UX",
+        "UI",
+        "Design",
+        "Atomic design",
+        "JSX",
+        "React DOM",
+        "JS Asynchronous",
+        "SEO",
+        "Accessibility"
+      ],
+      "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel",
+      "links": {
+        "website": "https://gift-party.vercel.app/",
+        "repo": "https://github.com/ItsMeLeonardo/gif-party"
+      }
+    },
+    {
+      "title": "Todo App",
+      "image": {
+        "png": "todo-app.png",
+        "webp": "todo-app.webp"
+      },
+      "screens": [
+        {
+          "png": "todo-app-1.png",
+          "webp": "todo-app-1.webp"
+        },
+        {
+          "png": "todo-app-2.png",
+          "webp": "todo-app-2.webp"
+        },
+        {
+          "png": "todo-app-3.png",
+          "webp": "todo-app-3.webp"
+        },
+        {
+          "png": "todo-app-4.png",
+          "webp": "todo-app-4.webp"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "HTML5",
+          "icon": {
+            "svg": "html.svg",
+            "png": "html.png",
+            "webp": "html.webp"
+          }
+        },
+        {
+          "name": "tailwindcss",
+          "icon": {
+            "svg": "tailwindcss.svg",
+            "png": "tailwindcss.png",
+            "webp": "tailwindcss.webp"
+          }
+        },
+        {
+          "name": "react",
+          "icon": {
+            "svg": "react.svg",
+            "png": "react.png",
+            "webp": "react.webp"
+          }
+        },
+        {
+          "name": "JavaScript",
+          "icon": {
+            "svg": "js.svg",
+            "png": "js.png",
+            "webp": "js.webp"
+          }
+        },
+        {
+          "name": "vite",
+          "icon": {
+            "svg": "vite.svg",
+            "png": "vite.png",
+            "webp": "vite.webp"
+          }
         }
       ],
       "softSkills": [
@@ -154,16 +242,190 @@
         "UI",
         "Design",
         "Front-end",
-        "React",
-        "Figma",
-        "HTML5",
-        "CSS3",
-        "JavaScript"
+        "Creativity",
+        "Functional Programming",
+        "React-context"
       ],
-      "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel",
+      "description": "TOODOS is a web app whose objective is to support you to get organizate. In the app you can add new TODOS and when you finish them you can mark them as complete after delete or keep them. By carrying out this project I tested my knowledge of functional programming, added management of state and context of react, and creativity was also present. I use a css framework (tailwind css) layout and style",
       "links": {
-        "website": "https://gift-party.vercel.app/",
-        "repo": "https://github.com/ItsMeLeonardo/gif-party"
+        "website": "https://todo-app-beryl-rho.vercel.app/",
+        "repo": "https://github.com/ItsMeLeonardo/TOODOS"
+      }
+    },
+    {
+      "title": "React shop",
+      "image": {
+        "png": "react-shop.png",
+        "webp": "react-shop.webp"
+      },
+      "screens": [
+        {
+          "png": "react-shop-1.png",
+          "webp": "react-shop-1.webp"
+        },
+        {
+          "png": "react-shop-2.png",
+          "webp": "react-shop-2.webp"
+        },
+        {
+          "png": "react-shop-3.png",
+          "webp": "react-shop-3.webp"
+        },
+        {
+          "png": "react-shop-4.png",
+          "webp": "react-shop-4.webp"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "react",
+          "icon": {
+            "svg": "react.svg",
+            "png": "react.png",
+            "webp": "react.webp"
+          }
+        },
+        {
+          "name": "JavaScript",
+          "icon": {
+            "svg": "js.svg",
+            "png": "js.png",
+            "webp": "js.webp"
+          }
+        },
+        {
+          "name": "Sass",
+          "icon": {
+            "svg": "sass.svg",
+            "png": "sass.png",
+            "webp": "sass.webp"
+          }
+        },
+        {
+          "name": "babel",
+          "icon": {
+            "svg": "babel.svg",
+            "png": "babel.png",
+            "webp": "babel.webp"
+          }
+        },
+        {
+          "name": "webpack",
+          "icon": {
+            "svg": "webpack.svg",
+            "png": "webpack.png",
+            "webp": "webpack.webp"
+          }
+        }
+      ],
+      "softSkills": [
+        "UX",
+        "Performance",
+        "API",
+        "Front-end",
+        "Logic",
+        "Creativity"
+      ],
+      "description": "React-shop is an e-commerce made in react, the skills developed in this projects are: basic concepts of webpack and babel for development environment, a challenge was the context management for login, shopping cart and persistence of products. For the design I used a project already made in HTML and CSS, another challenge was to transform the static html in react components, but supported on the atomic design I could solve it, also I used a preprocessor (sass) to optimize some style of the components. ",
+      "links": {
+        "website": "https://react-shop-smoky.vercel.app/",
+        "repo": "https://github.com/ItsMeLeonardo/React-shop"
+      }
+    },
+    {
+      "title": "E-commerce Java",
+      "image": {
+        "png": "ecommerce.png",
+        "webp": "ecommerce.webp"
+      },
+      "screens": [
+        {
+          "png": "ecommerce-1.png",
+          "webp": "ecommerce-1.webp"
+        },
+        {
+          "png": "ecommerce-2.png",
+          "webp": "ecommerce-2.webp"
+        },
+        {
+          "png": "ecommerce-3.png",
+          "webp": "ecommerce-3.webp"
+        },
+        {
+          "png": "ecommerce-4.png",
+          "webp": "ecommerce-4.webp"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "Java",
+          "icon": {
+            "svg": "java.svg",
+            "png": "java.png",
+            "webp": "java.webp"
+          }
+        },
+        {
+          "name": "JavaScript",
+          "icon": {
+            "svg": "js.svg",
+            "png": "js.png",
+            "webp": "js.webp"
+          }
+        },
+        {
+          "name": "CSS 3",
+          "icon": {
+            "svg": "css.svg",
+            "png": "css.png",
+            "webp": "css.webp"
+          }
+        },
+        {
+          "name": "HTML 5",
+          "icon": {
+            "svg": "html.svg",
+            "png": "html.png",
+            "webp": "html.webp"
+          }
+        },
+        {
+          "name": "Jakarta EE",
+          "icon": {
+            "svg": "jakarta-ee.svg",
+            "png": "jakarta-ee.png",
+            "webp": "jakarta-ee.webp"
+          }
+        },
+        {
+          "name": "MySQL",
+          "icon": {
+            "svg": "mysql.svg",
+            "png": "mysql.png",
+            "webp": "mysql.webp"
+          }
+        },
+        {
+          "name": "MongoDB",
+          "icon": {
+            "svg": "mongodb.svg",
+            "png": "mongodb.png",
+            "webp": "mongodb.webp"
+          }
+        }
+      ],
+      "softSkills": [
+        "API",
+        "Front-end",
+        "Logic",
+        "Creativity",
+        "Team work",
+        "Leadership"
+      ],
+      "description": "In both projects I did in the university, the goal in both projects was to automate some commerce processes, transforming from a physical store to a virtual store. The challenges I have faced have been, data persistence in databases (mysql, mongoDB), we use the MVC pattern, in this project is developed with Java, we use the POO paradigm to solve all the requirements, and comply with the standards of an ecommerce. ",
+      "links": {
+        "website": "https://itsmeleonardo.github.io/project-ciclo-vi/views/user/home.html",
+        "repo": "https://github.com/ItsMeLeonardo/icis-sebas"
       }
     }
   ]

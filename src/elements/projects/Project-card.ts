@@ -29,6 +29,7 @@ export class ProjectCard extends LitElement {
   toggleModal() {
     this.showModal = !this.showModal
     document.body.style.overflow = 'hidden'
+    console.log({ card: this.title })
   }
 
   render() {
