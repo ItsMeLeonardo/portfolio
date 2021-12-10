@@ -20,6 +20,7 @@
     "production": "vercel --prod"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "lit": "^2.0.0"
   },
   "devDependencies": {

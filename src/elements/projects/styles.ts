@@ -62,7 +62,7 @@ export const styles = [
       --size: 24px;
     }
 
-    .Project-tech .IconContent:nth-child(1) {
+    /*    .Project-tech .IconContent:nth-child(1) {
       --delay: 0.1s;
     }
 
@@ -77,10 +77,10 @@ export const styles = [
     .Project-tech .IconContent:nth-child(4) {
       --delay: 0.4s;
     }
-
     .Project-tech .IconContent:nth-child(5) {
       --delay: 0.5s;
     }
+    */
 
     .ProjectCard:hover .Project-tech .IconContent {
       top: 0;

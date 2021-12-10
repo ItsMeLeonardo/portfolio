@@ -56,8 +56,11 @@ export class ProjectCard extends LitElement {
 
         <aside class="Project-tech">
           ${this.technologies.map(
-            (technology) => html`
-              <picture class="glass-light IconContent">
+            (technology, index) => html`
+              <picture
+                class="glass-light IconContent"
+                style="--delay: 0.${index + 1}s"
+              >
                 <source
                   type="image/png"
                   srcset="${iconPath}/png/${technology.icon.png}"
