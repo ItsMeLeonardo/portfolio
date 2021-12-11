@@ -100,6 +100,10 @@ export const globalStyles = [
       gap: 0.25rem;
     }
     /* ---- utils and global styles ----*/
+    .w-full {
+      width: 100%;
+    }
+
     .hidden {
       display: none !important;
       opacity: 0;

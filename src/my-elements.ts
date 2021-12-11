@@ -6,4 +6,4 @@ import './elements/skills/Skill-content'
 
 import './pages/Page-content'
 
-import './elements/modal/Modal-layout'
+import './elements/form/Form-contact'

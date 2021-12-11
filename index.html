@@ -6,8 +6,6 @@
   <link rel="stylesheet" href="/src/styles/index.css">
   <script type="module" src="/src/my-elements.ts" defer></script>
   <script src="/scripts/hide-show.js" defer></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script src="/scripts/form.js" defer></script>
 
   <meta name="application-name" content="Leonardo's Portfolio">
   <meta name="description"
@@ -235,37 +233,10 @@
     </header>
 
     <aside class="Contact-content">
-      <form action="#" class="Form Contact-form" id="contact-form">
-        <header class="Form-title">
-          <h3>Gmail</h3>
-        </header>
-
-        <div class="Form-field-group">
-          <div class="Form-field">
-            <input type="text" name="name" id="name" class="Form-input" placeholder=" " required>
-            <label for="name" class="Form-label">Your name here</label>
-          </div>
-
-          <div class="Form-field">
-            <input type="email" id="email" name="email" class="Form-input" placeholder=" " required>
-            <label for="email" class="Form-label">name@example.com</label>
-          </div>
-        </div>
-
-        <div class="Form-field">
-          <textarea name="message" id="message" class="Form-input" cols="30" rows="10" placeholder=" " required></textarea>
-          <label for="message" class="Form-label">Write here</label>
-        </div>
-
-        <button class="Form-submit Button Button--primary">
-          Send message
-          <picture class="Form-icon">
-            <img src="icons/svg/send.svg" alt="plane icon">
-          </picture>
-        </button>
-      </form>
+      <form-contact id="form-contact" title="Send Email 📩"></form-contact>
     </aside>
   </section>
+
 </main>
 <a href="#">
   <picture class="scroll-up">
