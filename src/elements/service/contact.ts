@@ -1,8 +1,10 @@
-import emailjs from 'emailjs-com'
+import emailJs from 'emailjs-com'
+
+import { authEmail } from './authEmail'
 
 const user_api_key = 'user_LlNxIZ9kh0mrF8XzhtFiJ'
 
-emailjs.init(user_api_key)
+emailJs.init(user_api_key)
 
 export type Contact = {
   name: string
@@ -10,14 +12,16 @@ export type Contact = {
   message: string
 }
 
-// TODO: Add validation
-
-export const sendMessage = (templateParams: Contact) => {
+export const sendMessage = async (templateParams: Contact) => {
   const serviceID = 'service_4nqmzwj'
   const templateID = 'template_gccsea7'
 
-  emailjs
-    .send(serviceID, templateID, templateParams)
-    .then(console.log)
-    .catch((error) => console.error(error))
+  const isValid = await authEmail(templateParams.email)
+
+  if (!isValid.valid) {
+    return Promise.reject(isValid.reason)
+  }
+
+  return Promise.resolve('Message sent :D')
+  // return emailJs.send(serviceID, templateID, templateParams)
 }
