@@ -34,14 +34,10 @@ export class FormContact extends LitElement {
 
   handleBlur(event: Event) {
     // @ts-ignore
-    const { name, value } = event.detail
+    const { name, value, error } = event.detail
 
-    if (value.trim().length === 0) {
-      this.error.message = 'This field is required'
-      this.error.hasError = true
-      console.log(this.error)
-      return
-    }
+    this.error.hasError = error.hasError
+    this.error.message = error.message
 
     // @ts-ignore
     this.contact[name] = value
@@ -53,22 +49,17 @@ export class FormContact extends LitElement {
       sendMessage(this.contact)
         .then((response) => {
           console.log({ response })
-
           //TODO: clear field and show success message
         })
         .catch((error) => {
           this.error.message = error
           this.error.hasError = true
-          // this.requestUpdate()
+          this.requestUpdate()
         })
     }
   }
 
   render() {
-    console.log('render')
-
-    const errorMessage = html`<span>${this.error.message}</span>`
-
     return html`
       <form
         action="#"
@@ -94,13 +85,14 @@ export class FormContact extends LitElement {
             title="email"
             .isRequired=${true}
             class="w-full"
+            .error=${this.error}
             @myEvent=${this.handleBlur}
           >
           </form-field>
         </field-group>
 
         <form-field
-          label="Write here"
+          label="Write your message here"
           name="message"
           .isRequired=${true}
           type="textarea"

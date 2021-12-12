@@ -19,9 +19,8 @@ export const sendMessage = async (templateParams: Contact) => {
   const isValid = await authEmail(templateParams.email)
 
   if (!isValid.valid) {
-    return Promise.reject(isValid.reason)
+    return Promise.reject('Wrong email')
   }
 
-  return Promise.resolve('Message sent :D')
-  // return emailJs.send(serviceID, templateID, templateParams)
+  return emailJs.send(serviceID, templateID, templateParams)
 }

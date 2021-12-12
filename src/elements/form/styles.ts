@@ -20,7 +20,23 @@ export const styles = [
       background: var(--main-bg);
       border-radius: var(--small-radius);
       position: relative;
-      overflow: hidden;
+    }
+
+    .Form-error-message {
+      color: var(--white);
+      font: var(--input-font);
+      position: absolute;
+      white-space: nowrap;
+      left: 0.25rem;
+      top: -0.75rem;
+      background: var(--secondary);
+      padding: 0.25rem;
+      font-size: 12px;
+      border-radius: 0.25rem;
+    }
+
+    .Form-error .Form-input {
+      border: 2px solid var(--secondary);
     }
 
     .Form-label {
@@ -59,14 +75,17 @@ export const styles = [
 
     .Form-input:not(:-moz-placeholder-shown) + .Form-label {
       left: -100%;
+      opacity: 0;
     }
 
     .Form-input:not(:-ms-input-placeholder) + .Form-label {
       left: -100%;
+      opacity: 0;
     }
 
     .Form-input:not(:placeholder-shown) + .Form-label {
       left: -100%;
+      opacity: 0;
     }
 
     .Form-submit {
