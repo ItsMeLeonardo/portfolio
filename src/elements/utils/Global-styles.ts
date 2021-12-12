@@ -1,6 +1,7 @@
 import { css } from 'lit'
 
 import { tabletGlobalStyles } from './tablet-global-styles'
+import { desktopGlobalStyles } from './desktop-global-styles'
 export const globalStyles = [
   css`
     *,
@@ -148,6 +149,113 @@ export const globalStyles = [
       text-align: center;
     }
 
+    .isLoading {
+      position: relative;
+      pointer-events: none;
+    }
+    .isLoading::after {
+      --size: 50%;
+      content: '';
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      width: var(--size);
+      height: var(--size);
+      border-radius: var(--small-radius);
+      background: url('/icons/svg/logo-dark.svg') no-repeat center/contain;
+    }
+
+    .isLoading::before {
+      --size: 100%;
+      content: '';
+      position: absolute;
+      width: var(--size);
+      height: var(--size);
+      z-index: var(--front);
+      top: 0;
+      left: 0;
+      background: linear-gradient(270deg, #ff8e3c, #d9376e);
+      background-size: 400% 400%;
+      mix-blend-mode: screen;
+      -webkit-animation: loading 3s ease infinite;
+      -moz-animation: loading 3s ease infinite;
+      animation: loading 3s ease infinite;
+    }
+
+    @-webkit-keyframes loading {
+      0% {
+        background-position: 0 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
+    @-moz-keyframes loading {
+      0% {
+        background-position: 0 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
+    @keyframes loading {
+      0% {
+        background-position: 0 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
+
+    /*TOAST*/
+    .Toast {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 280px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: var(--front);
+      padding: 0.5rem;
+      transition: opacity var(--transition);
+      border-radius: var(--small-radius);
+      box-shadow: var(--pale-dark-shadow);
+    }
+    .Toast-content {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: var(--small-radius);
+    }
+    .Toast-text {
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .Toast-text-title {
+      font: var(--card-small-title);
+      font-size: 0.85rem;
+    }
+    .Toast-text-body {
+      font: var(--btn-font);
+      font-size: 0.75rem;
+    }
+
     /* BADGE*/
     .Badges-list {
       display: flex;
@@ -189,4 +297,5 @@ export const globalStyles = [
     }
   `,
   tabletGlobalStyles,
+  desktopGlobalStyles,
 ]

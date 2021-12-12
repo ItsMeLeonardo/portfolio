@@ -66,9 +66,6 @@ export class FormField extends LitElement {
     const errorMessage = html`
       <span class="Form-error-message"> ${this.error.message} </span>
     `
-
-    console.log(this.error)
-
     if (this.type === 'textarea') {
       return html`
         <div class="Form-field ${this.error.hasError ? 'Form-error' : ''}">

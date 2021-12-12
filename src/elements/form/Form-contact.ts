@@ -8,6 +8,7 @@ import { sendMessage } from '../service/contact'
 import './Field-group'
 import './Form-field'
 import '../utils/My-button'
+import '../utils/My-Toast'
 
 @customElement('form-contact')
 export class FormContact extends LitElement {
@@ -32,6 +33,12 @@ export class FormContact extends LitElement {
     hasError: false,
   }
 
+  @property({ type: Boolean })
+  isLoading = false
+
+  @property({ type: Boolean })
+  isSuccess = false
+
   handleBlur(event: Event) {
     // @ts-ignore
     const { name, value, error } = event.detail
@@ -46,12 +53,16 @@ export class FormContact extends LitElement {
   handleSubmit(event: Event) {
     event.preventDefault()
     if (!this.error.hasError) {
+      this.isLoading = true
       sendMessage(this.contact)
         .then((response) => {
           console.log({ response })
-          //TODO: clear field and show success message
+          this.isSuccess = true
+          this.isLoading = false
         })
         .catch((error) => {
+          console.log({ error })
+          this.isLoading = false
           this.error.message = error
           this.error.hasError = true
           this.requestUpdate()
@@ -59,11 +70,21 @@ export class FormContact extends LitElement {
     }
   }
 
+  private createToast = () => {
+    return html`
+      <my-toast
+        title="Thanks for your message"
+        body="I'll get back to you as soon as possible"
+      ></my-toast>
+    `
+  }
+
   render() {
     return html`
+      ${this.isSuccess ? this.createToast() : ''}
       <form
         action="#"
-        class="Form Contact-form"
+        class="Form Contact-form ${this.isLoading ? 'isLoading' : ''}"
         id="${this.id}"
         @submit=${this.handleSubmit}
       >
