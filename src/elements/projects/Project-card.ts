@@ -6,10 +6,12 @@ import '../modal/Modal-layout'
 import { styles } from './styles'
 
 import type { Technology } from './types'
-import type { ImageType } from '../utils/Types'
+import type { VideoType } from '../utils/Types'
 
 const imagePath = '/images'
 const iconPath = '/icons'
+const videoPath = '/videos'
+
 @customElement('project-card')
 export class ProjectCard extends LitElement {
   static styles = styles
@@ -18,7 +20,7 @@ export class ProjectCard extends LitElement {
   title = ''
 
   @property()
-  image: ImageType | undefined
+  video: VideoType | undefined
 
   @property()
   technologies: Technology[] = []
@@ -29,11 +31,31 @@ export class ProjectCard extends LitElement {
   toggleModal() {
     this.showModal = !this.showModal
     document.body.style.overflow = 'hidden'
-    console.log({ card: this.title })
+  }
+
+  private playVideo(e: Event) {
+    const video = e.target as HTMLVideoElement
+    video.load()
+    video.play().catch((error) => console.log({ error }))
+  }
+
+  private pauseVideo(e: Event) {
+    const video = e.target as HTMLVideoElement
+
+    video.pause()
+  }
+
+  private toggleVideo(e: Event) {
+    const video = e.currentTarget as HTMLVideoElement
+    if (video.paused) {
+      video.play().catch((error) => console.log({ error }))
+    } else {
+      video.pause()
+    }
   }
 
   render() {
-    const modal = this.showModal
+    const modalDetail = this.showModal
       ? html`<modal-layout
           titleProject="${this.title}"
           .toggleModal=${this.toggleModal}
@@ -43,16 +65,23 @@ export class ProjectCard extends LitElement {
 
     return html`
       <div class="ProjectCard">
-        <picture class="ProjectCard-image">
+        <video
+          class="ProjectCard-image"
+          poster="${imagePath}/webp/${this.video?.poster}.webp"
+          muted
+          @mouseenter=${this.playVideo}
+          @mouseleave=${this.pauseVideo}
+          @click=${this.toggleVideo}
+        >
           <source
-            type="image/webp"
-            srcset="${imagePath}/png/${this.image?.png}"
+            src="${videoPath}/mp4/${this.video?.name}.mp4"
+            type="video/mp4"
           />
-          <img
-            src="${imagePath}/webp/${this.image?.webp}"
-            alt="${this.title} screen demo"
+          <source
+            src="${videoPath}/webm/${this.video?.name}.webm"
+            type="video/webm"
           />
-        </picture>
+        </video>
 
         <aside class="Project-tech">
           ${this.technologies.map(
@@ -94,7 +123,7 @@ export class ProjectCard extends LitElement {
           </button>
         </footer>
       </div>
-      ${modal}
+      ${modalDetail}
     `
   }
 }

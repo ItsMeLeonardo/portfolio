@@ -8,3 +8,8 @@ export type ImageType = {
   png: string
   webp: string
 }
+
+export type VideoType = {
+  name: string
+  poster: string
+}

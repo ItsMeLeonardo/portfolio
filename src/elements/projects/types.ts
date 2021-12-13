@@ -1,4 +1,4 @@
-import { IconType, ImageType } from '../utils/Types'
+import { IconType, ImageType, VideoType } from '../utils/Types'
 
 export type Technology = {
   name: string
@@ -7,7 +7,7 @@ export type Technology = {
 
 export type Project = {
   title: string
-  image: ImageType
+  video: VideoType
   technologies: Technology[]
   screens: ImageType[]
   softSkills: string[]

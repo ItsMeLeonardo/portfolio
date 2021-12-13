@@ -22,7 +22,7 @@ export class ProjectContent extends LitElement {
           (project: Project) => html`
             <project-card
               .title=${project.title}
-              .image=${project.image}
+              .video=${project.video}
               .technologies=${project.technologies}
             />
           `,
