@@ -2,9 +2,9 @@
   "projects": [
     {
       "title": "My Films",
-      "image": {
-        "png": "my-films.png",
-        "webp": "my-films.webp"
+      "video": {
+        "name": "my_films",
+        "poster": "my-films-poster"
       },
       "screens": [
         {
@@ -89,9 +89,9 @@
     },
     {
       "title": "Gif Party",
-      "image": {
-        "png": "my-films.png",
-        "webp": "my-films.webp"
+      "video": {
+        "name": "gif_party",
+        "poster": "gif-party-poster"
       },
       "screens": [
         {
@@ -172,9 +172,9 @@
     },
     {
       "title": "Todo App",
-      "image": {
-        "png": "todo-app.png",
-        "webp": "todo-app.webp"
+      "video": {
+        "name": "todo_app",
+        "poster": "todo-app-poster"
       },
       "screens": [
         {
@@ -253,9 +253,9 @@
     },
     {
       "title": "React shop",
-      "image": {
-        "png": "react-shop.png",
-        "webp": "react-shop.webp"
+      "video": {
+        "name": "react_shop",
+        "poster": "react-shop-poster"
       },
       "screens": [
         {
@@ -333,9 +333,9 @@
     },
     {
       "title": "E-commerce Java",
-      "image": {
-        "png": "ecommerce.png",
-        "webp": "ecommerce.webp"
+      "video": {
+        "name": "ecommerce_java",
+        "poster": "ecommerce-poster"
       },
       "screens": [
         {
