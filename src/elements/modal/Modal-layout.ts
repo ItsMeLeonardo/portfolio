@@ -36,15 +36,13 @@ export class ModalLayout extends LitElement {
       (project) => project.title === this.titleProject,
     )
 
-    console.log({ project })
-
     if (!this.isOpen) {
       return null
     }
 
     return html`
       <section class="Modal-layout">
-        <div class="Modal glass-light">
+        <div class="Modal">
           <header class="Modal-header" @click="${this.hiddenModal}">
             <h2 class="Modal-title">Project Detail</h2>
 

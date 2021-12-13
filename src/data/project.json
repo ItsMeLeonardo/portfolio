@@ -84,8 +84,7 @@
       ],
       "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel",
       "links": {
-        "website": "https://my-films.vercel.app/",
-        "repo": "https://github.com/ItsMeLeonardo/my-films"
+            "repo": "https://github.com/ItsMeLeonardo/my-films"
       }
     },
     {

@@ -26,6 +26,7 @@ export const styles = [
       flex-direction: column;
       gap: 0.75rem;
       overflow-y: scroll;
+      background: var(--white);
     }
 
     .Modal-header {
@@ -88,6 +89,7 @@ export const styles = [
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      box-shadow: var(--pale-dark-shadow);
     }
 
     .Detail-screens {
