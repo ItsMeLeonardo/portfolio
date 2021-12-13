@@ -84,7 +84,7 @@
       ],
       "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel",
       "links": {
-            "repo": "https://github.com/ItsMeLeonardo/my-films"
+            "repo": "https://github.com/ItsMeLeonardo/movie-app"
       }
     },
     {
@@ -158,11 +158,9 @@
         "UI",
         "Design",
         "Atomic design",
-        "JSX",
-        "React DOM",
-        "JS Asynchronous",
-        "SEO",
-        "Accessibility"
+        "Accessibility",
+        "Front-end",
+        "Creativity"
       ],
       "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel",
       "links": {
@@ -242,8 +240,7 @@
         "Design",
         "Front-end",
         "Creativity",
-        "Functional Programming",
-        "React-context"
+        "Problem-Solving"
       ],
       "description": "TOODOS is a web app whose objective is to support you to get organizate. In the app you can add new TODOS and when you finish them you can mark them as complete after delete or keep them. By carrying out this project I tested my knowledge of functional programming, added management of state and context of react, and creativity was also present. I use a css framework (tailwind css) layout and style",
       "links": {
@@ -323,7 +320,8 @@
         "API",
         "Front-end",
         "Logic",
-        "Creativity"
+        "Creativity",
+        "Patience"
       ],
       "description": "React-shop is an e-commerce made in react, the skills developed in this projects are: basic concepts of webpack and babel for development environment, a challenge was the context management for login, shopping cart and persistence of products. For the design I used a project already made in HTML and CSS, another challenge was to transform the static html in react components, but supported on the atomic design I could solve it, also I used a preprocessor (sass) to optimize some style of the components. ",
       "links": {
@@ -419,7 +417,8 @@
         "Logic",
         "Creativity",
         "Team work",
-        "Leadership"
+        "Leadership",
+        "Design"
       ],
       "description": "In both projects I did in the university, the goal in both projects was to automate some commerce processes, transforming from a physical store to a virtual store. The challenges I have faced have been, data persistence in databases (mysql, mongoDB), we use the MVC pattern, in this project is developed with Java, we use the POO paradigm to solve all the requirements, and comply with the standards of an ecommerce. ",
       "links": {

@@ -26,13 +26,16 @@ export class SectionInfo extends LitElement {
   technologies: Technology[] = []
 
   render() {
+    const thisPageHaveWebsite =
+      this.links?.website !== undefined ? '' : 'link-disabled'
+
     return html`
       <h2 class="Detail-title">${this.title}</h2>
 
       <div class="Detail-Buttons">
         <a
           href="${this.links?.website}"
-          class="Button Button--primary"
+          class="Button Button--primary ${thisPageHaveWebsite}"
           target="_blank"
         >
           View Website
@@ -62,7 +65,7 @@ export class SectionInfo extends LitElement {
       </div>
 
       <div class="Detail-description">
-        <h3 class="Detail-subTitle">Soft Skills</h3>
+        <h3 class="Detail-subTitle">Skills</h3>
 
         <ul class="Badges-list">
           ${this.softSkills.map(

@@ -100,6 +100,11 @@ export const globalStyles = [
       font-size: 0.85rem;
       gap: 0.25rem;
     }
+
+    .link-disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
     /* ---- utils and global styles ----*/
     .w-full {
       width: 100%;
@@ -265,6 +270,7 @@ export const globalStyles = [
     }
 
     .Badge-item {
+      --pale-dark-shadow: 0 10px 35px -5px rgb(13 13 13 / 15%);
       padding: 0.5rem 0.75rem;
       border-radius: 0.5rem;
       background: var(--white);

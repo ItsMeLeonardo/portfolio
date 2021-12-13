@@ -35,13 +35,11 @@ export class ProjectCard extends LitElement {
 
   private playVideo(e: Event) {
     const video = e.target as HTMLVideoElement
-    video.load()
     video.play().catch((error) => console.log({ error }))
   }
 
   private pauseVideo(e: Event) {
     const video = e.target as HTMLVideoElement
-
     video.pause()
   }
 
@@ -69,6 +67,7 @@ export class ProjectCard extends LitElement {
           class="ProjectCard-image"
           poster="${imagePath}/webp/${this.video?.poster}.webp"
           muted
+          loop
           @mouseenter=${this.playVideo}
           @mouseleave=${this.pauseVideo}
           @click=${this.toggleVideo}
