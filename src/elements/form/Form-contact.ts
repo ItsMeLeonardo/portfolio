@@ -63,9 +63,10 @@ export class FormContact extends LitElement {
         .catch((error) => {
           console.log({ error })
           this.isLoading = false
-          this.error.message = error
-          this.error.hasError = true
-          this.requestUpdate()
+          this.error = {
+            message: error,
+            hasError: true,
+          }
         })
     }
   }
