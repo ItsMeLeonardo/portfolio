@@ -113,7 +113,24 @@ body {
 textarea {
     resize: none;
 }
+/* ---- Scroll ----- */
+::-webkit-scrollbar {
+    width: .5rem;
+    height: .5rem;
+}
+::-webkit-scrollbar-track {
+    background: var(--gray);
+}
 
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 142, 60,.5);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
 /* ---- glass effect ---- */
 .glass-light {
     -webkit-backdrop-filter: blur(6px) saturate(120%) contrast(45%) brightness(130%);
@@ -652,11 +669,6 @@ textarea {
 
     .Hero {
         margin-top: 120px;
-    }
-
-    /*scroll up*/
-    .scroll-up {
-        margin-right: calc((100vw - 1200px) / 2);
     }
 
     /* ---- about me ---- */

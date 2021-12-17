@@ -47,6 +47,25 @@ export const globalStyles = [
     textarea {
       resize: none;
     }
+
+    /* ---- scroll ----*/
+    ::-webkit-scrollbar {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--gray);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 142, 60, 0.5);
+      transition: 0.5s ease-in-out;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary);
+    }
+
     /* ---- glass effect ---- */
     .glass-light {
       -webkit-backdrop-filter: blur(6px) saturate(120%) contrast(45%)

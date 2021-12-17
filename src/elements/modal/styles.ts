@@ -50,7 +50,7 @@ export const styles = [
       justify-content: center;
       align-items: center;
       background: var(--secondary);
-      border-radius: var(--small-radius);
+      border-radius: var(--large-radius);
     }
 
     .close-modal img {
