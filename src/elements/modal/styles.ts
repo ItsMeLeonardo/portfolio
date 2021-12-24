@@ -84,8 +84,9 @@ export const styles = [
     }
 
     .Detail-screens-content {
-      height: 200px;
+      width: 100%;
       position: relative;
+      aspect-ratio: 16/9;
       display: flex;
       justify-content: center;
       align-items: flex-end;
@@ -98,7 +99,10 @@ export const styles = [
       width: 100%;
       padding: 0 0.5rem 0.5rem 0.5rem;
       gap: 0.75rem;
-      grid-template-rows: 40px;
+      grid-template-rows: auto;
+    }
+    .Detail-screen {
+      aspect-ratio: 16/9;
     }
 
     .Detail-screens input {
@@ -121,7 +125,7 @@ export const styles = [
 
     .Detail-img img {
       transition: transform var(--transition);
-      border-radius: 5px;
+      border-radius: 0.75rem;
       width: 100%;
       height: 100%;
       -o-object-fit: cover;

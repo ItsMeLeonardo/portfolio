@@ -26,22 +26,6 @@
       ],
       "technologies": [
         {
-          "name": "HTML5",
-          "icon": {
-            "svg": "html.svg",
-            "png": "html.png",
-            "webp": "html.webp"
-          }
-        },
-        {
-          "name": "CSS3",
-          "icon": {
-            "svg": "css.svg",
-            "png": "css.png",
-            "webp": "css.webp"
-          }
-        },
-        {
           "name": "JavaScript",
           "icon": {
             "svg": "js.svg",
@@ -71,6 +55,22 @@
             "svg": "zustand.svg",
             "png": "zustand.png",
             "webp": "zustand.webp"
+          }
+        },
+        {
+          "name": "CSS3",
+          "icon": {
+            "svg": "css.svg",
+            "png": "css.png",
+            "webp": "css.webp"
+          }
+        },
+        {
+          "name": "HTML5",
+          "icon": {
+            "svg": "html.svg",
+            "png": "html.png",
+            "webp": "html.webp"
           }
         }
       ],
@@ -363,30 +363,6 @@
           }
         },
         {
-          "name": "JavaScript",
-          "icon": {
-            "svg": "js.svg",
-            "png": "js.png",
-            "webp": "js.webp"
-          }
-        },
-        {
-          "name": "CSS 3",
-          "icon": {
-            "svg": "css.svg",
-            "png": "css.png",
-            "webp": "css.webp"
-          }
-        },
-        {
-          "name": "HTML 5",
-          "icon": {
-            "svg": "html.svg",
-            "png": "html.png",
-            "webp": "html.webp"
-          }
-        },
-        {
           "name": "Jakarta EE",
           "icon": {
             "svg": "jakarta-ee.svg",
@@ -409,6 +385,30 @@
             "png": "mongodb.png",
             "webp": "mongodb.webp"
           }
+        },
+        {
+          "name": "JavaScript",
+          "icon": {
+            "svg": "js.svg",
+            "png": "js.png",
+            "webp": "js.webp"
+          }
+        },
+        {
+          "name": "CSS 3",
+          "icon": {
+            "svg": "css.svg",
+            "png": "css.png",
+            "webp": "css.webp"
+          }
+        },
+        {
+          "name": "HTML 5",
+          "icon": {
+            "svg": "html.svg",
+            "png": "html.png",
+            "webp": "html.webp"
+          }
         }
       ],
       "softSkills": [
@@ -424,6 +424,85 @@
       "links": {
         "website": "https://itsmeleonardo.github.io/project-ciclo-vi/",
         "repo": "https://github.com/ItsMeLeonardo/icis-sebas"
+      }
+    },
+    {
+      "title": "File uploader",
+      "video": {
+        "name": "file_uploader",
+        "poster": "file-uploader-poster"
+      },
+      "screens": [
+        {
+          "png": "file-uploader-1.png",
+          "webp": "file-uploader-1.webp"
+        },
+        {
+          "png": "file-uploader-2.png",
+          "webp": "file-uploader-2.webp"
+        },
+        {
+          "png": "file-uploader-3.png",
+          "webp": "file-uploader-3.webp"
+        },
+        {
+          "png": "file-uploader-4.png",
+          "webp": "file-uploader-4.webp"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "JavaScript",
+          "icon": {
+            "svg": "js.svg",
+            "png": "js.png",
+            "webp": "js.webp"
+          }
+        },
+        {
+          "name": "postcss",
+          "icon": {
+            "svg": "postcss.svg",
+            "png": "postcss.png",
+            "webp": "postcss.webp"
+          }
+        },
+        {
+          "name": "react",
+          "icon": {
+            "svg": "react.svg",
+            "png": "react.png",
+            "webp": "react.webp"
+          }
+        },
+        {
+          "name": "vite",
+          "icon": {
+            "svg": "vite.svg",
+            "png": "vite.png",
+            "webp": "vite.webp"
+          }
+        },
+        {
+          "name": "indexedDB",
+          "icon": {
+            "svg": "indexedDB.svg",
+            "png": "indexedDB.png",
+            "webp": "indexedDB.webp"
+          }
+        }
+      ],
+      "softSkills": [
+        "Front-end",
+        "Creativity",
+        "research",
+        "Design",
+        "solve problems"
+      ],
+      "description": "This project is a web application where you can upload and save files, for now it only stores files locally. <br/> By doing this project I can learn how the browser interprets and handles the files and how I can manipulate it through the browser API. For the UI I used a Figma design, I  also used react to transform from design to code, I used IndexedDB for the persistence of the files locally.",
+      "links": {
+        "website": "https://file-uploader-three.vercel.app/",
+        "repo": "https://github.com/ItsMeLeonardo/file-uploader"
       }
     }
   ]

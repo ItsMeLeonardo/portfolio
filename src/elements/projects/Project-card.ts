@@ -83,7 +83,7 @@ export class ProjectCard extends LitElement {
         </video>
 
         <aside class="Project-tech">
-          ${this.technologies.map(
+          ${this.technologies.slice(0, 5).map(
             (technology, index) => html`
               <picture
                 class="glass-light IconContent"
