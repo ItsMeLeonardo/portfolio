@@ -1,7 +1,7 @@
 const BASE_URL = 'https://mailcheck.p.rapidapi.com'
 
 /* @ts-ignore */
-const authEmailApiKey: string = import.meta.env.AUTH_EMAIL_API_KEY
+const authEmailApiKey: string = import.meta.env.VITE_AUTH_EMAIL_API_KEY
 
 const HEADERS = {
   'x-rapidapi-host': 'mailcheck.p.rapidapi.com',
