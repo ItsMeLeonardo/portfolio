@@ -1,11 +1,14 @@
 const BASE_URL = 'https://mailcheck.p.rapidapi.com'
 
+/* @ts-ignore */
+const authEmailApiKey: string = import.meta.env.AUTH_EMAIL_API_KEY
+
 const HEADERS = {
   'x-rapidapi-host': 'mailcheck.p.rapidapi.com',
-  'x-rapidapi-key': '7028af46dcmsh56246c485fca18cp1be055jsnb15ace0594c7',
+  'x-rapidapi-key': authEmailApiKey,
 }
 
-export const authEmail = async  (email: string) => {
+export const authEmail = async (email: string) => {
   const response = await fetch(`${BASE_URL}/?domain=${email}`, {
     method: 'GET',
     headers: HEADERS,

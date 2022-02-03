@@ -2,7 +2,8 @@ import emailJs from 'emailjs-com'
 
 import { authEmail } from './authEmail'
 
-const user_api_key = 'user_LlNxIZ9kh0mrF8XzhtFiJ'
+/* @ts-ignore */
+const user_api_key: string = import.meta.env.USER_API_KEY
 
 emailJs.init(user_api_key)
 
