@@ -27,6 +27,7 @@ export const styles = [
       gap: 0.75rem;
       overflow-y: scroll;
       background: var(--white);
+      scrollbar-width: thin;
     }
 
     .Modal-header {
