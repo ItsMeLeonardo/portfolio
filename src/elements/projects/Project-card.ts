@@ -76,10 +76,6 @@ export class ProjectCard extends LitElement {
             src="${videoPath}/mp4/${this.video?.name}.mp4"
             type="video/mp4"
           />
-          <source
-            src="${videoPath}/webm/${this.video?.name}.webm"
-            type="video/webm"
-          />
         </video>
 
         <aside class="Project-tech">
