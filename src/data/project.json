@@ -422,7 +422,7 @@
       ],
       "description": "In both projects I did in the university, the goal in both projects was to automate some commerce processes, transforming from a physical store to a virtual store. The challenges I have faced have been, data persistence in databases (mysql, mongoDB), we use the MVC pattern, in this project is developed with Java, we use the POO paradigm to solve all the requirements, and comply with the standards of an ecommerce. ",
       "links": {
-        "website": "https://itsmeleonardo.github.io/project-ciclo-vi/",
+        "website": "https://itsmeleonardo.github.io/project-ciclo-VI/",
         "repo": "https://github.com/ItsMeLeonardo/icis-sebas"
       }
     },
