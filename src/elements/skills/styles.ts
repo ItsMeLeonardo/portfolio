@@ -22,6 +22,7 @@ export const styles = [
     .skills-title {
       font: var(--subtitle);
       color: var(--text);
+      margin-top: 0.5rem;
     }
 
     .Skills-list {

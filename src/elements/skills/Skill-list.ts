@@ -4,29 +4,33 @@ import { customElement, property } from 'lit/decorators.js'
 import { styles } from './styles'
 import './Skill-item'
 
-import type { SkillsType } from './types'
+import type { Technology } from './types'
 
 @customElement('skill-list')
 export class SkillList extends LitElement {
   static styles = styles
 
   @property()
-  skills: SkillsType | undefined
+  techList: Technology[] = []
+
+  @property()
+  headline: string | undefined
 
   render() {
     return html`
       <article class="Skills-type">
         <header class="skills-title">
-          <h3 class="skills-title">${this.skills?.title}</h3>
+          <h3 class="skills-title">${this.headline}</h3>
           <ul class="Skills-list">
-            ${this.skills?.technologies.map(
-              (skill) => html`
-                <skill-item
-                  .name=${skill.name}
-                  .url=${skill.url}
-                  .icon=${skill.icon}
-                />
-              `,
+            ${this.techList.map(
+              (tech) =>
+                html`
+                  <skill-item
+                    .url="${tech.webpage}"
+                    .techName="${tech.name}"
+                    .icon=${tech.icon}
+                  />
+                `,
             )}
           </ul>
         </header>

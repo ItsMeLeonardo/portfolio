@@ -3,22 +3,20 @@ import { customElement, property } from 'lit/decorators.js'
 
 import { styles } from './styles'
 
-import type { IconType } from '../utils/Types'
-
-const iconsPath = '/icons'
+import type { Media } from '../utils/Types'
 
 @customElement('skill-item')
 export class SkillItem extends LitElement {
   static styles = styles
 
-  @property({ type: String })
-  name = ''
-
-  @property({ type: String })
-  url = ''
+  @property()
+  url: string | undefined
 
   @property()
-  icon: IconType | undefined
+  techName: string | undefined
+
+  @property()
+  icon: Media | undefined
 
   render() {
     return html`
@@ -26,20 +24,9 @@ export class SkillItem extends LitElement {
         <a href="${this.url}" target="_blank">
           <figure class="skill-data">
             <picture class="skill-icon">
-              <source
-                type="image/png"
-                srcset="${iconsPath}/png/${this.icon?.png}"
-              />
-              <source
-                type="image/webp"
-                srcset="${iconsPath}/webp/${this.icon?.webp}"
-              />
-              <img
-                src="${iconsPath}/svg/${this.icon?.svg}"
-                alt="${this.name} logo"
-              />
+              <img src="${this.icon?.url}" alt="${this.techName}" />
             </picture>
-            <figcaption class="skill-name">${this.name}</figcaption>
+            <figcaption class="skill-name">${this.techName}</figcaption>
           </figure>
         </a>
       </li>

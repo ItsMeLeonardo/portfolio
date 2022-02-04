@@ -1,21 +1,16 @@
-import { IconType } from '../utils/Types'
+import { Media } from '../utils/Types'
 
-export type Skills = {
-  types: Types
-}
-export type Types = {
-  master: SkillsType
-  learning: SkillsType
-  future: SkillsType
-}
-
-export type SkillsType = {
-  title: string
-  technologies: SkillTechnology[]
-}
-
-export type SkillTechnology = {
+export type Technology = {
+  expertise: string
+  icon: Media
+  webpage: string
   name: string
-  url: string
-  icon: IconType
+  id: string
+}
+
+export type TechGrouped = {
+  comingSoon: Technology[]
+  advanced: Technology[]
+  medium: Technology[]
+  other: Technology[]
 }
