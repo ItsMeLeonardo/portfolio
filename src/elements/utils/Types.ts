@@ -1,15 +1,5 @@
-export type IconType = {
-  svg: string
-  png: string
-  webp: string
-}
-
-export type ImageType = {
-  png: string
-  webp: string
-}
-
-export type VideoType = {
+export type Media = {
+  id?: string
+  url: string
   name: string
-  poster: string
 }

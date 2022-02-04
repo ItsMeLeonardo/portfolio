@@ -61,7 +61,8 @@ export class ModalLayout extends LitElement {
             <div class="Modal-section info">
               <section-info
                 class="Modal-section"
-                .links="${project?.links}"
+                .repo="${project?.repo}"
+                .website="${project?.website}"
                 .title="${project?.title}"
                 .description="${project?.description}"
                 .technologies="${project?.technologies}"

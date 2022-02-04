@@ -6,11 +6,7 @@ import '../modal/Modal-layout'
 import { styles } from './styles'
 
 import type { Technology } from './types'
-import type { VideoType } from '../utils/Types'
-
-const imagePath = '/images'
-const iconPath = '/icons'
-const videoPath = '/videos'
+import type { Media } from '../utils/Types'
 
 @customElement('project-card')
 export class ProjectCard extends LitElement {
@@ -20,7 +16,10 @@ export class ProjectCard extends LitElement {
   title = ''
 
   @property()
-  video: VideoType | undefined
+  poster: Media | undefined
+
+  @property()
+  demo: Media | undefined
 
   @property()
   technologies: Technology[] = []
@@ -65,18 +64,14 @@ export class ProjectCard extends LitElement {
       <div class="ProjectCard">
         <video
           class="ProjectCard-image"
-          poster="${imagePath}/webp/${this.video?.poster}.webp"
+          poster="${this.poster?.url}"
           muted
           loop
           @mouseenter=${this.playVideo}
           @mouseleave=${this.pauseVideo}
           @click=${this.toggleVideo}
-        >
-          <source
-            src="${videoPath}/mp4/${this.video?.name}.mp4"
-            type="video/mp4"
-          />
-        </video>
+          src="${this.demo?.url}"
+        ></video>
 
         <aside class="Project-tech">
           ${this.technologies.slice(0, 5).map(
@@ -85,17 +80,9 @@ export class ProjectCard extends LitElement {
                 class="glass-light IconContent"
                 style="--delay: 0.${index + 1}s"
               >
-                <source
-                  type="image/png"
-                  srcset="${iconPath}/png/${technology.icon.png}"
-                />
-                <source
-                  type="image/webp"
-                  srcset="${iconPath}/webp/${technology.icon.webp}"
-                />
                 <img
-                  src="${iconPath}/svg/${technology.icon.svg}"
-                  alt="${technology.name}"
+                  src="${technology.icon.url}"
+                  alt="${technology.icon.name}"
                 />
               </picture>
             `,

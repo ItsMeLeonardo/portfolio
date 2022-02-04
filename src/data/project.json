@@ -1,79 +1,90 @@
 {
   "projects": [
     {
-      "title": "My Films",
-      "video": {
-        "name": "my_films",
-        "poster": "my-films-poster"
+      "demo": {
+        "url": "https://va.media.tumblr.com/tumblr_r3v8k1HVCp1zsmohb.mp4",
+        "name": "project-test/xraxau4xvwykzdqa9sao"
+      },
+      "poster": {
+        "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643054611/project-test/gx0vt2ki6kixxbsyl3cl.jpg",
+        "name": "project-test/gx0vt2ki6kixxbsyl3cl"
       },
       "screens": [
         {
-          "png": "my-films-1.png",
-          "webp": "my-films-1.webp"
+          "url": "https://i.pinimg.com/236x/b5/d5/42/b5d5429b1a7075a40d9ab364fdef5cc4.jpg",
+          "name": "project-test/ps24hasaxyy5vdmfvgsj",
+          "_id": "61ef0614dd2fc0b97221eae9"
         },
         {
-          "png": "my-films-2.png",
-          "webp": "my-films-2.webp"
+          "url": "https://i.pinimg.com/236x/15/af/3f/15af3f8c3972673e997c7e8b9472af26.jpg",
+          "name": "project-test/xupt4feqgndykmhcvju7",
+          "_id": "61ef0614dd2fc0b97221eaea"
         },
         {
-          "png": "my-films-3.png",
-          "webp": "my-films-3.webp"
+          "url": "https://i.pinimg.com/236x/91/9d/8b/919d8b202f4ab34eba7525f7f2fa23f4.jpg",
+          "name": "project-test/xupt4feqgndykmhcvju7",
+          "_id": "61ef0614dd2fc0b97221es5e"
         },
         {
-          "png": "my-films-4.png",
-          "webp": "my-films-4.webp"
+          "url": "https://i.pinimg.com/236x/32/8e/e1/328ee16e988a01747cace86dafb76d15.jpg",
+          "name": "project-test/xupt4feqgndykmhcvju7",
+          "_id": "61ef0614dd2fc0b97221easa"
         }
       ],
       "technologies": [
         {
-          "name": "JavaScript",
           "icon": {
-            "svg": "js.svg",
-            "png": "js.png",
-            "webp": "js.webp"
-          }
+            "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053641/project-test/skg1sqkwrtpxicbao94r.svg",
+            "name": "project-test/skg1sqkwrtpxicbao94r"
+          },
+          "expertise": "other",
+          "webpage": "https://vitejs.dev/",
+          "name": "vite",
+          "id": "61ef024bdd2fc0b97221eadc"
         },
         {
-          "name": "Figma",
           "icon": {
-            "svg": "figma.svg",
-            "png": "figma.png",
-            "webp": "figma.webp"
-          }
+            "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053783/project-test/zx5tfh2nmdandmo8byxi.svg",
+            "name": "project-test/zx5tfh2nmdandmo8byxi"
+          },
+          "expertise": "advanced",
+          "webpage": "https://vitejs.dev/",
+          "name": "javaScript",
+          "id": "61ef02d8dd2fc0b97221eade"
         },
         {
-          "name": "React",
           "icon": {
-            "svg": "react.svg",
-            "png": "react.png",
-            "webp": "react.webp"
-          }
+            "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053827/project-test/aamnguptljeikpfkc7nz.svg",
+            "name": "project-test/aamnguptljeikpfkc7nz"
+          },
+          "expertise": "advanced",
+          "webpage": "https://es.reactjs.org/",
+          "name": "react",
+          "id": "61ef0304dd2fc0b97221eae0"
         },
         {
-          "name": "zustand",
           "icon": {
-            "svg": "zustand.svg",
-            "png": "zustand.png",
-            "webp": "zustand.webp"
-          }
+            "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053956/project-test/q71w7ivep0uqg28gl05o.svg",
+            "name": "project-test/q71w7ivep0uqg28gl05o"
+          },
+          "expertise": "advanced",
+          "webpage": "https://html.com/",
+          "name": "HTML",
+          "id": "61ef0385dd2fc0b97221eae2"
         },
         {
-          "name": "CSS3",
           "icon": {
-            "svg": "css.svg",
-            "png": "css.png",
-            "webp": "css.webp"
-          }
-        },
-        {
-          "name": "HTML5",
-          "icon": {
-            "svg": "html.svg",
-            "png": "html.png",
-            "webp": "html.webp"
-          }
+            "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053956/project-test/q71w7ivep0uqg28gl05o.svg",
+            "name": "project-test/czo0u8jvx7pbc3pxazg1"
+          },
+          "expertise": "advanced",
+          "webpage": "https://developer.mozilla.org/es/docs/Web/CSS",
+          "name": "CSS",
+          "id": "61ef0424dd2fc0b97221eae5"
         }
       ],
+      "website": "website.com/test",
+      "repo": "https://github.com/ItsMeLeonardo/movie-app",
       "softSkills": [
         "UX",
         "UI",
@@ -82,428 +93,106 @@
         "Front-end",
         "Creativity"
       ],
-      "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel",
-      "links": {
-            "repo": "https://github.com/ItsMeLeonardo/movie-app"
-      }
+      "description": "react + vite + api",
+      "title": "movie app",
+      "id": "61ef0614dd2fc0b97221eae8"
     },
     {
-      "title": "Gif Party",
-      "video": {
-        "name": "gif_party",
-        "poster": "gif-party-poster"
+      "demo": {
+        "url": "https://va.media.tumblr.com/tumblr_r3v8k1HVCp1zsmohb.mp4",
+        "name": "project-test/xraxau4xvwykzdqa9sao"
+      },
+      "poster": {
+        "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643054611/project-test/gx0vt2ki6kixxbsyl3cl.jpg",
+        "name": "project-test/gx0vt2ki6kixxbsyl3cl"
       },
       "screens": [
         {
-          "png": "gif-party-1.png",
-          "webp": "gif-party-1.webp"
+          "url": "https://i.pinimg.com/236x/b5/d5/42/b5d5429b1a7075a40d9ab364fdef5cc4.jpg",
+          "name": "project-test/ps24hasaxyy5vdmfvgsj",
+          "_id": "61ef0614dd2fc0b97221eae9"
         },
         {
-          "png": "gif-party-2.png",
-          "webp": "gif-party-2.webp"
+          "url": "https://i.pinimg.com/236x/15/af/3f/15af3f8c3972673e997c7e8b9472af26.jpg",
+          "name": "project-test/xupt4feqgndykmhcvju7",
+          "_id": "61ef0614dd2fc0b97221eaea"
         },
         {
-          "png": "gif-party-3.png",
-          "webp": "gif-party-3.webp"
+          "url": "https://i.pinimg.com/236x/91/9d/8b/919d8b202f4ab34eba7525f7f2fa23f4.jpg",
+          "name": "project-test/xupt4feqgndykmhcvju7",
+          "_id": "61ef0614dd2fc0b97221es5e"
         },
         {
-          "png": "gif-party-4.png",
-          "webp": "gif-party-4.webp"
+          "url": "https://i.pinimg.com/236x/32/8e/e1/328ee16e988a01747cace86dafb76d15.jpg",
+          "name": "project-test/xupt4feqgndykmhcvju7",
+          "_id": "61ef0614dd2fc0b97221easa"
         }
       ],
       "technologies": [
         {
-          "name": "HTML5",
           "icon": {
-            "svg": "html.svg",
-            "png": "html.png",
-            "webp": "html.webp"
-          }
+            "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053641/project-test/skg1sqkwrtpxicbao94r.svg",
+            "name": "project-test/skg1sqkwrtpxicbao94r"
+          },
+          "expertise": "other",
+          "webpage": "https://vitejs.dev/",
+          "name": "vite",
+          "id": "61ef024bdd2fc0b97221eadc"
         },
         {
-          "name": "CSS3",
           "icon": {
-            "svg": "css.svg",
-            "png": "css.png",
-            "webp": "css.webp"
-          }
+            "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053783/project-test/zx5tfh2nmdandmo8byxi.svg",
+            "name": "project-test/zx5tfh2nmdandmo8byxi"
+          },
+          "expertise": "advanced",
+          "webpage": "https://vitejs.dev/",
+          "name": "javaScript",
+          "id": "61ef02d8dd2fc0b97221eade"
         },
         {
-          "name": "JavaScript",
           "icon": {
-            "svg": "js.svg",
-            "png": "js.png",
-            "webp": "js.webp"
-          }
+            "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053827/project-test/aamnguptljeikpfkc7nz.svg",
+            "name": "project-test/aamnguptljeikpfkc7nz"
+          },
+          "expertise": "advanced",
+          "webpage": "https://es.reactjs.org/",
+          "name": "react",
+          "id": "61ef0304dd2fc0b97221eae0"
         },
         {
-          "name": "Figma",
           "icon": {
-            "svg": "figma.svg",
-            "png": "figma.png",
-            "webp": "figma.webp"
-          }
+            "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053956/project-test/q71w7ivep0uqg28gl05o.svg",
+            "name": "project-test/q71w7ivep0uqg28gl05o"
+          },
+          "expertise": "advanced",
+          "webpage": "https://html.com/",
+          "name": "HTML",
+          "id": "61ef0385dd2fc0b97221eae2"
         },
         {
-          "name": "React",
           "icon": {
-            "svg": "react.svg",
-            "png": "react.png",
-            "webp": "react.webp"
-          }
+            "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053956/project-test/q71w7ivep0uqg28gl05o.svg",
+            "name": "project-test/czo0u8jvx7pbc3pxazg1"
+          },
+          "expertise": "advanced",
+          "webpage": "https://developer.mozilla.org/es/docs/Web/CSS",
+          "name": "CSS",
+          "id": "61ef0424dd2fc0b97221eae5"
         }
       ],
+      "website": "website.com/test",
+      "repo": "https://github.com/ItsMeLeonardo/movie-app",
       "softSkills": [
         "UX",
         "UI",
+        "atomic design",
         "Design",
-        "Atomic design",
-        "Accessibility",
         "Front-end",
         "Creativity"
       ],
-      "description": "This project consist of a gifs search engine, I proposed to do this project with a personal challenge, where tested my creativity for design in FIGMA and my knowledge of react, DOM management, SEO and accessibility, asynchronism in Javascript, considering the user experience and performance, finally the deployment in vercel",
-      "links": {
-        "website": "https://gift-party.vercel.app/",
-        "repo": "https://github.com/ItsMeLeonardo/gif-party"
-      }
-    },
-    {
-      "title": "Todo App",
-      "video": {
-        "name": "todo_app",
-        "poster": "todo-app-poster"
-      },
-      "screens": [
-        {
-          "png": "todo-app-1.png",
-          "webp": "todo-app-1.webp"
-        },
-        {
-          "png": "todo-app-2.png",
-          "webp": "todo-app-2.webp"
-        },
-        {
-          "png": "todo-app-3.png",
-          "webp": "todo-app-3.webp"
-        },
-        {
-          "png": "todo-app-4.png",
-          "webp": "todo-app-4.webp"
-        }
-      ],
-      "technologies": [
-        {
-          "name": "HTML5",
-          "icon": {
-            "svg": "html.svg",
-            "png": "html.png",
-            "webp": "html.webp"
-          }
-        },
-        {
-          "name": "tailwindcss",
-          "icon": {
-            "svg": "tailwindcss.svg",
-            "png": "tailwindcss.png",
-            "webp": "tailwindcss.webp"
-          }
-        },
-        {
-          "name": "react",
-          "icon": {
-            "svg": "react.svg",
-            "png": "react.png",
-            "webp": "react.webp"
-          }
-        },
-        {
-          "name": "JavaScript",
-          "icon": {
-            "svg": "js.svg",
-            "png": "js.png",
-            "webp": "js.webp"
-          }
-        },
-        {
-          "name": "vite",
-          "icon": {
-            "svg": "vite.svg",
-            "png": "vite.png",
-            "webp": "vite.webp"
-          }
-        }
-      ],
-      "softSkills": [
-        "UX",
-        "UI",
-        "Design",
-        "Front-end",
-        "Creativity",
-        "Problem-Solving"
-      ],
-      "description": "TOODOS is a web app whose objective is to support you to get organizate. In the app you can add new TODOS and when you finish them you can mark them as complete after delete or keep them. By carrying out this project I tested my knowledge of functional programming, added management of state and context of react, and creativity was also present. I use a css framework (tailwind css) layout and style",
-      "links": {
-        "website": "https://todo-app-beryl-rho.vercel.app/",
-        "repo": "https://github.com/ItsMeLeonardo/TOODOS"
-      }
-    },
-    {
-      "title": "React shop",
-      "video": {
-        "name": "react_shop",
-        "poster": "react-shop-poster"
-      },
-      "screens": [
-        {
-          "png": "react-shop-1.png",
-          "webp": "react-shop-1.webp"
-        },
-        {
-          "png": "react-shop-2.png",
-          "webp": "react-shop-2.webp"
-        },
-        {
-          "png": "react-shop-3.png",
-          "webp": "react-shop-3.webp"
-        },
-        {
-          "png": "react-shop-4.png",
-          "webp": "react-shop-4.webp"
-        }
-      ],
-      "technologies": [
-        {
-          "name": "react",
-          "icon": {
-            "svg": "react.svg",
-            "png": "react.png",
-            "webp": "react.webp"
-          }
-        },
-        {
-          "name": "JavaScript",
-          "icon": {
-            "svg": "js.svg",
-            "png": "js.png",
-            "webp": "js.webp"
-          }
-        },
-        {
-          "name": "Sass",
-          "icon": {
-            "svg": "sass.svg",
-            "png": "sass.png",
-            "webp": "sass.webp"
-          }
-        },
-        {
-          "name": "babel",
-          "icon": {
-            "svg": "babel.svg",
-            "png": "babel.png",
-            "webp": "babel.webp"
-          }
-        },
-        {
-          "name": "webpack",
-          "icon": {
-            "svg": "webpack.svg",
-            "png": "webpack.png",
-            "webp": "webpack.webp"
-          }
-        }
-      ],
-      "softSkills": [
-        "UX",
-        "Performance",
-        "API",
-        "Front-end",
-        "Logic",
-        "Creativity",
-        "Patience"
-      ],
-      "description": "React-shop is an e-commerce made in react, the skills developed in this projects are: basic concepts of webpack and babel for development environment, a challenge was the context management for login, shopping cart and persistence of products. For the design I used a project already made in HTML and CSS, another challenge was to transform the static html in react components, but supported on the atomic design I could solve it, also I used a preprocessor (sass) to optimize some style of the components. ",
-      "links": {
-        "website": "https://react-shop-smoky.vercel.app/",
-        "repo": "https://github.com/ItsMeLeonardo/React-shop"
-      }
-    },
-    {
-      "title": "E-commerce Java",
-      "video": {
-        "name": "ecommerce_java",
-        "poster": "ecommerce-poster"
-      },
-      "screens": [
-        {
-          "png": "ecommerce-1.png",
-          "webp": "ecommerce-1.webp"
-        },
-        {
-          "png": "ecommerce-2.png",
-          "webp": "ecommerce-2.webp"
-        },
-        {
-          "png": "ecommerce-3.png",
-          "webp": "ecommerce-3.webp"
-        },
-        {
-          "png": "ecommerce-4.png",
-          "webp": "ecommerce-4.webp"
-        }
-      ],
-      "technologies": [
-        {
-          "name": "Java",
-          "icon": {
-            "svg": "java.svg",
-            "png": "java.png",
-            "webp": "java.webp"
-          }
-        },
-        {
-          "name": "Jakarta EE",
-          "icon": {
-            "svg": "jakarta-ee.svg",
-            "png": "jakarta-ee.png",
-            "webp": "jakarta-ee.webp"
-          }
-        },
-        {
-          "name": "MySQL",
-          "icon": {
-            "svg": "mysql.svg",
-            "png": "mysql.png",
-            "webp": "mysql.webp"
-          }
-        },
-        {
-          "name": "MongoDB",
-          "icon": {
-            "svg": "mongodb.svg",
-            "png": "mongodb.png",
-            "webp": "mongodb.webp"
-          }
-        },
-        {
-          "name": "JavaScript",
-          "icon": {
-            "svg": "js.svg",
-            "png": "js.png",
-            "webp": "js.webp"
-          }
-        },
-        {
-          "name": "CSS 3",
-          "icon": {
-            "svg": "css.svg",
-            "png": "css.png",
-            "webp": "css.webp"
-          }
-        },
-        {
-          "name": "HTML 5",
-          "icon": {
-            "svg": "html.svg",
-            "png": "html.png",
-            "webp": "html.webp"
-          }
-        }
-      ],
-      "softSkills": [
-        "API",
-        "Front-end",
-        "Logic",
-        "Creativity",
-        "Team work",
-        "Leadership",
-        "Design"
-      ],
-      "description": "In both projects I did in the university, the goal in both projects was to automate some commerce processes, transforming from a physical store to a virtual store. The challenges I have faced have been, data persistence in databases (mysql, mongoDB), we use the MVC pattern, in this project is developed with Java, we use the POO paradigm to solve all the requirements, and comply with the standards of an ecommerce. ",
-      "links": {
-        "website": "https://itsmeleonardo.github.io/project-ciclo-VI/",
-        "repo": "https://github.com/ItsMeLeonardo/icis-sebas"
-      }
-    },
-    {
-      "title": "File uploader",
-      "video": {
-        "name": "file_uploader",
-        "poster": "file-uploader-poster"
-      },
-      "screens": [
-        {
-          "png": "file-uploader-1.png",
-          "webp": "file-uploader-1.webp"
-        },
-        {
-          "png": "file-uploader-2.png",
-          "webp": "file-uploader-2.webp"
-        },
-        {
-          "png": "file-uploader-3.png",
-          "webp": "file-uploader-3.webp"
-        },
-        {
-          "png": "file-uploader-4.png",
-          "webp": "file-uploader-4.webp"
-        }
-      ],
-      "technologies": [
-        {
-          "name": "JavaScript",
-          "icon": {
-            "svg": "js.svg",
-            "png": "js.png",
-            "webp": "js.webp"
-          }
-        },
-        {
-          "name": "postcss",
-          "icon": {
-            "svg": "postcss.svg",
-            "png": "postcss.png",
-            "webp": "postcss.webp"
-          }
-        },
-        {
-          "name": "react",
-          "icon": {
-            "svg": "react.svg",
-            "png": "react.png",
-            "webp": "react.webp"
-          }
-        },
-        {
-          "name": "vite",
-          "icon": {
-            "svg": "vite.svg",
-            "png": "vite.png",
-            "webp": "vite.webp"
-          }
-        },
-        {
-          "name": "indexedDB",
-          "icon": {
-            "svg": "indexedDB.svg",
-            "png": "indexedDB.png",
-            "webp": "indexedDB.webp"
-          }
-        }
-      ],
-      "softSkills": [
-        "Front-end",
-        "Creativity",
-        "research",
-        "Design",
-        "solve problems"
-      ],
-      "description": "This project is a web application where you can upload and save files, for now it only stores files locally. <br/> By doing this project I can learn how the browser interprets and handles the files and how I can manipulate it through the browser API. For the UI I used a Figma design, I  also used react to transform from design to code, I used IndexedDB for the persistence of the files locally.",
-      "links": {
-        "website": "https://file-uploader-three.vercel.app/",
-        "repo": "https://github.com/ItsMeLeonardo/file-uploader"
-      }
+      "description": "react + vite + api",
+      "title": "movie app",
+      "id": "61ef0614dd2fc0b97221eae8"
     }
   ]
 }

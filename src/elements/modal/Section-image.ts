@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { ImageType } from '../utils/Types'
+import { Media } from '../utils/Types'
 
 import { styles } from './styles'
 
@@ -9,7 +9,7 @@ export class SectionImage extends LitElement {
   static styles = styles
 
   @property()
-  screens: ImageType[] = []
+  screens: Media[] = []
 
   render() {
     return html`
@@ -26,11 +26,7 @@ export class SectionImage extends LitElement {
                   checked
                 />
                 <picture class="Detail-img">
-                  <source type="image/png" srcset="images/png/${screen.png}" />
-                  <img
-                    src="images/webp/${screen.webp}"
-                    alt="${screen.png.split('.')[0]}"
-                  />
+                  <img src="${screen.url}" alt="${screen.name}" />
                 </picture>
               </label>
             `,

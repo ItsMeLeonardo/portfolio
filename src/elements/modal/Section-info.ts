@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { Links, Technology } from '../projects/types'
+import { Technology } from '../projects/types'
 
 import { styles } from './styles'
 
@@ -14,7 +14,10 @@ export class SectionInfo extends LitElement {
   title = ''
 
   @property()
-  links: Links | undefined
+  website = ''
+
+  @property()
+  repo = ''
 
   @property({ type: String })
   description = ''
@@ -27,14 +30,14 @@ export class SectionInfo extends LitElement {
 
   render() {
     const thisPageHaveWebsite =
-      this.links?.website !== undefined ? '' : 'link-disabled'
+      this.website !== undefined ? '' : 'link-disabled'
 
     return html`
       <h2 class="Detail-title">${this.title}</h2>
 
       <div class="Detail-Buttons">
         <a
-          href="${this.links?.website}"
+          href="${this.website}"
           class="Button Button--primary ${thisPageHaveWebsite}"
           target="_blank"
         >
@@ -45,11 +48,7 @@ export class SectionInfo extends LitElement {
             paramIcon="eye"
           />
         </a>
-        <a
-          href="${this.links?.repo}"
-          class="Button Button--gray"
-          target="_blank"
-        >
+        <a href="${this.repo}" class="Button Button--gray" target="_blank">
           View Code
           <icon-picture
             className="Detail-icon IconContent"
@@ -86,10 +85,10 @@ export class SectionInfo extends LitElement {
             (tech) => html`
               <li class="Badge-item">
                 <span class="Badges-content"> ${tech.name} </span>
-                <icon-picture
-                  paramIcon="${tech.icon.svg}"
-                  className="Badge-item-icon IconContent"
-                  alt="${tech.name} icon"
+                <img
+                  class="Badge-item-icon IconContent"
+                  src="${tech.icon.url}"
+                  alt="${tech.name}"
                 />
               </li>
             `,
