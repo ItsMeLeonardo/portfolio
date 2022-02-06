@@ -7,15 +7,36 @@ import './Project-card'
 import type { Project } from './types'
 // @ts-ignore
 import data from '../../data/project.json'
+import { getProjects } from '../../services/getData'
 
 @customElement('project-content')
 export class ProjectContent extends LitElement {
   static styles = styles
 
   @property()
-  projects: Project[] = data.projects
+  projects: Project[] = []
+
+  private async getProjects() {
+    const [projects, error] = await getProjects()
+    if (error) {
+      // if have error, we find the projects from local data
+      console.error({ error, origin: 'getProjects' })
+      this.projects = data.projects
+      return
+    }
+
+    this.projects = projects
+  }
+
+  protected firstUpdated(
+    _changedProperties: Map<string | number | symbol, unknown>,
+  ): void {
+    this.getProjects()
+  }
 
   render() {
+    console.log({ projects: this.projects })
+
     return html`
       <article class="Projects-content">
         ${this.projects.map(
