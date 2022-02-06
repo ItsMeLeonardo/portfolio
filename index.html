@@ -1,249 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <title>DaLeo | It's me leonardo</title>
-  <link rel="stylesheet" href="/src/styles/index.css">
-  <script type="module" src="/src/my-elements.ts" defer></script>
-  <script src="/scripts/hide-show.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DaLeo | It's me leonardo</title>
+    <link rel="stylesheet" href="/src/styles/index.css" />
+    <script type="module" src="/src/my-elements.ts" defer></script>
+    <script src="/scripts/hide-show.js" defer></script>
 
-  <meta name="application-name" content="Leonardo's Portfolio">
-  <meta name="description"
-        content="In this page life Leonardo's Portfolio, I'm a passionated web developer, I like Front-end with react ">
+    <meta name="application-name" content="Leonardo's Portfolio" />
+    <meta
+      name="description"
+      content="In this page life Leonardo's Portfolio, I'm a passionated web developer, I like Front-end with react "
+    />
 
-  <meta name="msapplication-TileColor" content="#f1f1f1">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#2a2a2a">
+    <meta name="msapplication-TileColor" content="#f1f1f1" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#2a2a2a" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="assets/favicon/manifest.json">
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="assets/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="assets/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="assets/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/manifest.json" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- ---- NAVBAR ----    -->
+      <nav class="NavbarContent">
+        <header class="Navbar glass-light">
+          <div class="Navbar-Left">
+            <a href="#">
+              <picture class="Navbar-logo">
+                <img src="/icons/svg/logo-dark.svg" alt="DaLeo's logo" />
+              </picture>
+            </a>
 
+            <span class="Navbar-logo-text">DaLeo</span>
 
-</head>
-<body>
+            <picture class="icon-open Button">
+              <img
+                class="icon"
+                src="/icons/svg/menu-open.svg"
+                alt="open menu"
+              />
+            </picture>
 
-<main class="container">
-  <!-- ---- NAVBAR ----    -->
-  <nav class="NavbarContent">
-    <header class="Navbar glass-light">
-      <div class="Navbar-Left">
-        <a href="#">
-          <picture class="Navbar-logo">
-            <img src="/icons/svg/logo-dark.svg" alt="DaLeo's logo">
-          </picture>
-        </a>
+            <picture class="icon-close Button hidden">
+              <img class="icon" src="/icons/svg/close.svg" alt="close menu" />
+            </picture>
+          </div>
 
-        <span class="Navbar-logo-text">DaLeo</span>
+          <ul class="Navbar-right">
+            <li class="Navbar-item">
+              <a href="#about" class="Navbar-link">About me</a>
+            </li>
 
-        <picture class="icon-open Button">
-          <img class="icon" src="/icons/svg/menu-open.svg" alt="open menu">
+            <li class="Navbar-item">
+              <a href="#projects" class="Navbar-link">Projects</a>
+            </li>
+
+            <li class="Navbar-item">
+              <a href="#skills" class="Navbar-link">Skills</a>
+            </li>
+
+            <li class="Navbar-item">
+              <a href="#hobbies" class="Navbar-link">Hobbies</a>
+            </li>
+
+            <li class="Navbar-item">
+              <a href="#contact" class="Navbar-link">Contact</a>
+            </li>
+          </ul>
+        </header>
+      </nav>
+
+      <!-- ---- HERO ----    -->
+      <section class="Hero">
+        <article class="Hero-data">
+          <header class="Hero-header">
+            <h1 class="Hero-text">
+              Hello <br />
+              I'm <strong class="Hero-name">Leonardo</strong> <br />
+              Front-end developer
+            </h1>
+          </header>
+
+          <a
+            download=""
+            href="assets/cv/Leonardo's CV.pdf"
+            class="Button Button--primary"
+          >
+            Download CV
+            <picture class="icon-download">
+              <img src="/icons/svg/download.svg" alt="open menu" />
+            </picture>
+          </a>
+
+          <aside class="SocialMedia-Content">
+            <ul class="SocialMedia">
+              <li class="SocialMedia-item">
+                <a
+                  href="https://www.linkedin.com/in/carlos-leonardo-cruces-huaman-b4b142203/"
+                  target="_blank"
+                >
+                  <picture class="IconContent SocialMedia-icon">
+                    <img src="/icons/svg/linkedin.svg" alt="linkedin icon" />
+                  </picture>
+                </a>
+              </li>
+
+              <li class="SocialMedia-item">
+                <a href="https://twitter.com/cruces_huaman" target="_blank">
+                  <picture class="IconContent SocialMedia-icon">
+                    <img src="/icons/svg/twitter.svg" alt="twitter icon" />
+                  </picture>
+                </a>
+              </li>
+
+              <li class="SocialMedia-item">
+                <a href="https://dribbble.com/FrontenDaleo" target="_blank">
+                  <picture class="IconContent SocialMedia-icon">
+                    <img src="/icons/svg/dribbble.svg" alt="dribbble icon" />
+                  </picture>
+                </a>
+              </li>
+
+              <li class="SocialMedia-item">
+                <a href="https://github.com/ItsMeLeonardo" target="_blank">
+                  <picture class="IconContent SocialMedia-icon">
+                    <img src="/icons/svg/github.svg" alt="github icon" />
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </article>
+
+        <picture class="Hero-image">
+          <img src="/images/png/hero-image.png" alt="Leonardo's photo" />
         </picture>
+      </section>
 
-        <picture class="icon-close Button hidden">
-          <img class="icon" src="/icons/svg/close.svg" alt="close menu">
-        </picture>
-      </div>
+      <!-- ---- My phrase :D ----    -->
+      <h2 class="MyPhrase section">
+        "Never stop learning, but the life never stops teaching"
+      </h2>
 
-      <ul class="Navbar-right">
+      <!-- ---- WHO AM I ----    -->
+      <section class="About section" id="about">
+        <header class="titleSection">
+          <h2 class="About-title">Who am I ?</h2>
+        </header>
+        <article class="About-content">
+          <p class="paragraph">
+            Hi 👋, I’m a web developer from Perú, I like frontend, I really
+            enjoy making web pages and I like to follow best practices (clean
+            code, user experience), I like to discover new technologies, new
+            ways to solve a problem, I always seek to diversify my knowledge, to
+            be prepared for future challenges and if I do it with friends much
+            better😀.
+          </p>
+        </article>
+      </section>
 
-        <li class="Navbar-item">
-          <a href="#about" class="Navbar-link">About me</a>
-        </li>
+      <!-- ---- MY PROJECTS ----    -->
+      <section class="Projects section" id="projects">
+        <header class="titleSection">
+          <h2 class="Project-title">My projects</h2>
+        </header>
 
-        <li class="Navbar-item">
-          <a href="#projects" class="Navbar-link">Projects</a>
-        </li>
+        <project-content></project-content>
+      </section>
 
-        <li class="Navbar-item">
-          <a href="#skills" class="Navbar-link">Skills</a>
-        </li>
+      <!-- ---- MY SKILLS ----    -->
+      <section class="Skills section" id="skills">
+        <header class="titleSection">
+          <h2 class="Skills-title">My skills</h2>
+        </header>
 
-        <li class="Navbar-item">
-          <a href="#hobbies" class="Navbar-link">Hobbies</a>
-        </li>
+        <skill-content></skill-content>
+      </section>
 
-        <li class="Navbar-item">
-          <a href="#contact" class="Navbar-link">Contact</a>
-        </li>
+      <!-- ---- MY HOBBIES ----    -->
+      <section class="Hobbies section" id="hobbies">
+        <header class="titleSection">
+          <h2 class="Hobbies-title">My Hobbies</h2>
+        </header>
 
-      </ul>
-    </header>
-  </nav>
+        <article class="Hobbies-content">
+          <figure class="Hobbies-item">
+            <figcaption class="Hobbies-name">Read</figcaption>
+            <picture class="Hobbies-image">
+              <img src="/images/png/read.png" alt="Book" />
+            </picture>
+          </figure>
 
-  <!-- ---- HERO ----    -->
-  <section class="Hero">
-    <article class="Hero-data">
-      <header class="Hero-header">
-        <h1 class="Hero-text">
-          Hello <br/>
-          I'm <strong class="Hero-name">Leonardo</strong> <br>
-          Front-end developer
-        </h1>
-      </header>
+          <figure class="Hobbies-item">
+            <figcaption class="Hobbies-name">Learning</figcaption>
+            <picture class="Hobbies-image">
+              <img src="/images/png/learning.png" alt="Learning languages" />
+            </picture>
+          </figure>
 
-      <a download="" href="assets/cv/Leonardo's CV.pdf" class="Button Button--primary">
-        Download CV
-        <picture class="icon-download">
-          <img src="/icons/svg/download.svg" alt="open menu">
+          <figure class="Hobbies-item">
+            <figcaption class="Hobbies-name">Watch Movies</figcaption>
+            <picture class="Hobbies-image">
+              <img src="/images/png/movies.png" alt="Netflix logo" />
+            </picture>
+          </figure>
+
+          <figure class="Hobbies-item">
+            <figcaption class="Hobbies-name">Exercise</figcaption>
+            <picture class="Hobbies-image">
+              <img src="/images/png/exercice.png" alt="Feet" />
+            </picture>
+          </figure>
+
+          <figure class="Hobbies-item">
+            <figcaption class="Hobbies-name">UI design</figcaption>
+            <picture class="Hobbies-image">
+              <img src="/images/png/design.png" alt="Computer 3D" />
+            </picture>
+          </figure>
+        </article>
+      </section>
+
+      <!-- ---- MY CONTACT ME ----    -->
+
+      <section class="Contact section" id="contact">
+        <header class="titleSection">
+          <h2 class="Hobbies-title">Contact Me</h2>
+        </header>
+
+        <aside class="Contact-content">
+          <form-contact id="form-contact" title="Send Email 📩"></form-contact>
+        </aside>
+      </section>
+
+      <!-- ---- Scroll Up :D ----    -->
+      <a href="#">
+        <picture class="scroll-up">
+          <img src="icons/svg/arrow-up.svg" alt="" />
         </picture>
       </a>
-
-      <aside class="SocialMedia-Content">
-        <ul class="SocialMedia">
-          <li class="SocialMedia-item">
-            <a href="https://www.linkedin.com/in/carlos-leonardo-cruces-huaman-b4b142203/" target="_blank">
-              <picture class="IconContent SocialMedia-icon">
-                <img src="/icons/svg/linkedin.svg" alt="linkedin icon">
-              </picture>
-            </a>
-          </li>
-
-          <li class="SocialMedia-item">
-            <a href="https://twitter.com/cruces_huaman" target="_blank">
-              <picture class="IconContent SocialMedia-icon">
-                <img src="/icons/svg/twitter.svg" alt="twitter icon">
-              </picture>
-            </a>
-          </li>
-
-          <li class="SocialMedia-item">
-            <a href="https://dribbble.com/FrontenDaleo" target="_blank">
-              <picture class="IconContent SocialMedia-icon">
-                <img src="/icons/svg/dribbble.svg" alt="dribbble icon">
-              </picture>
-            </a>
-          </li>
-
-          <li class="SocialMedia-item">
-            <a href="https://github.com/ItsMeLeonardo" target="_blank">
-              <picture class="IconContent SocialMedia-icon">
-                <img src="/icons/svg/github.svg" alt="github icon">
-              </picture>
-            </a>
-          </li>
-        </ul>
-      </aside>
-
-    </article>
-
-    <picture class="Hero-image">
-      <img src="/images/png/hero-image.png" alt="Leonardo's photo">
-    </picture>
-  </section>
-
-  <!-- ---- My phrase :D ----    -->
-  <h2 class="MyPhrase section">
-    "Never stop learning, but the life never stops teaching"
-  </h2>
-
-  <!-- ---- WHO AM I ----    -->
-  <section class="About section" id="about">
-    <header class="titleSection">
-      <h2 class="About-title">Who am I ?</h2>
-    </header>
-    <article class="About-content">
-      <p class="paragraph">
-        Hi 👋, I’m  a web developer from Perú, I like frontend, I really enjoy making web pages and I like to follow best practices (clean code, user experience), I like to discover new technologies, new ways to solve a problem, I always seek to diversify my knowledge, to be prepared for future challenges and if I do it with friends much better😀.
-      </p>
-    </article>
-  </section>
-
-  <!-- ---- MY PROJECTS ----    -->
-  <section class="Projects section" id="projects">
-    <header class="titleSection">
-      <h2 class="Project-title">My projects</h2>
-    </header>
-
-    <project-content></project-content>
-
-  </section>
-
-  <!-- ---- MY SKILLS ----    -->
-  <section class="Skills section" id="skills">
-    <header class="titleSection">
-      <h2 class="Skills-title">My skills</h2>
-    </header>
-
-    <skill-content></skill-content>
-  </section>
-
-  <!-- ---- MY HOBBIES ----    -->
-  <section class="Hobbies section" id="hobbies">
-    <header class="titleSection">
-      <h2 class="Hobbies-title">My Hobbies</h2>
-    </header>
-
-    <article class="Hobbies-content">
-      <figure class="Hobbies-item">
-        <figcaption class="Hobbies-name">Read</figcaption>
-        <picture class="Hobbies-image">
-          <img src="/images/png/read.png" alt="Book">
-        </picture>
-      </figure>
-
-      <figure class="Hobbies-item">
-        <figcaption class="Hobbies-name">Learning</figcaption>
-        <picture class="Hobbies-image">
-          <img src="/images/png/learning.png" alt="Learning languages">
-        </picture>
-      </figure>
-
-      <figure class="Hobbies-item">
-        <figcaption class="Hobbies-name">Watch Movies</figcaption>
-        <picture class="Hobbies-image">
-          <img src="/images/png/movies.png" alt="Netflix logo">
-        </picture>
-      </figure>
-
-      <figure class="Hobbies-item">
-        <figcaption class="Hobbies-name">Exercise</figcaption>
-        <picture class="Hobbies-image">
-          <img src="/images/png/exercice.png" alt="Feet">
-        </picture>
-      </figure>
-
-      <figure class="Hobbies-item">
-        <figcaption class="Hobbies-name">UI design</figcaption>
-        <picture class="Hobbies-image">
-          <img src="/images/png/design.png" alt="Computer 3D">
-        </picture>
-      </figure>
-
-    </article>
-  </section>
-
-  <!-- ---- MY CONTACT ME ----    -->
-
-  <section class="Contact section" id="contact">
-    <header class="titleSection">
-      <h2 class="Hobbies-title">Contact Me</h2>
-    </header>
-
-    <aside class="Contact-content">
-      <form-contact id="form-contact" title="Send Email 📩"></form-contact>
-    </aside>
-  </section>
-
-  <!-- ---- Scroll Up :D ----    -->
-  <a href="#">
-    <picture class="scroll-up">
-      <img src="icons/svg/arrow-up.svg" alt="">
-    </picture>
-  </a>
-</main>
-</body>
+    </main>
+  </body>
 </html>

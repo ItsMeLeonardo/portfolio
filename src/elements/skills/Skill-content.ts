@@ -6,7 +6,7 @@ import './Skill-list'
 
 import type { Technology } from './types'
 // @ts-ignore
-import techGroupedData from '../../data/skills.json'
+import techGroupedData from '../../data/technologies.json'
 
 @customElement('skill-content')
 export class SkillContent extends LitElement {

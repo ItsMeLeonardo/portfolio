@@ -1,0 +1,192 @@
+{
+  "technologies": {
+    "other": [
+      {
+        "icon": {
+          "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053641/project-test/skg1sqkwrtpxicbao94r.svg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      }
+    ],
+    "advanced": [
+      {
+        "icon": {
+          "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053783/project-test/zx5tfh2nmdandmo8byxi.svg",
+          "name": "project-test/zx5tfh2nmdandmo8byxi"
+        },
+        "expertise": "advanced",
+        "webpage": "https://vitejs.dev/",
+        "name": "javaScript",
+        "id": "61ef02d8dd2fc0b97221eade"
+      },
+      {
+        "icon": {
+          "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053827/project-test/aamnguptljeikpfkc7nz.svg",
+          "name": "project-test/aamnguptljeikpfkc7nz"
+        },
+        "expertise": "advanced",
+        "webpage": "https://es.reactjs.org/",
+        "name": "react",
+        "id": "61ef0304dd2fc0b97221eae0"
+      },
+      {
+        "icon": {
+          "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053956/project-test/q71w7ivep0uqg28gl05o.svg",
+          "name": "project-test/q71w7ivep0uqg28gl05o"
+        },
+        "expertise": "advanced",
+        "webpage": "https://html.com/",
+        "name": "HTML",
+        "id": "61ef0385dd2fc0b97221eae2"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/c6/47/6e/c6476ed77efc5fe3f3d07e80f50b54ea.jpg",
+          "name": "project-test/czo0u8jvx7pbc3pxazg1"
+        },
+        "expertise": "advanced",
+        "webpage": "https://developer.mozilla.org/es/docs/Web/CSS",
+        "name": "CSS",
+        "id": "61ef0424dd2fc0b97221eae5"
+      }
+    ],
+    "comingSoon": [
+      {
+        "icon": {
+          "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053783/project-test/zx5tfh2nmdandmo8byxi.svg",
+          "name": "project-test/zx5tfh2nmdandmo8byxi"
+        },
+        "expertise": "advanced",
+        "webpage": "https://vitejs.dev/",
+        "name": "javaScript",
+        "id": "61ef02d8dd2fc0b97221eade"
+      },
+      {
+        "icon": {
+          "url": "https://res.cloudinary.com/itsmeleonardo/image/upload/f_auto/v1643053827/project-test/aamnguptljeikpfkc7nz.svg",
+          "name": "project-test/aamnguptljeikpfkc7nz"
+        },
+        "expertise": "advanced",
+        "webpage": "https://es.reactjs.org/",
+        "name": "react",
+        "id": "61ef0304dd2fc0b97221eae0"
+      }
+    ],
+    "medium": [
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      },
+      {
+        "icon": {
+          "url": "https://i.pinimg.com/236x/af/1d/34/af1d3485c9822b8e1ecbe2e35c4ffde6.jpg",
+          "name": "project-test/skg1sqkwrtpxicbao94r"
+        },
+        "expertise": "other",
+        "webpage": "https://vitejs.dev/",
+        "name": "vite",
+        "id": "61ef024bdd2fc0b97221eadc"
+      }
+    ]
+  }
+}
