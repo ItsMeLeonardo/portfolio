@@ -18,7 +18,7 @@ export class ProjectContent extends LitElement {
 
   private async getProjects() {
     const [projects, error] = await getProjects()
-    if (error) {
+    if (error || !projects) {
       // if have error, we find the projects from local data
       console.error({ error, origin: 'getProjects' })
       this.projects = data.projects
@@ -35,8 +35,6 @@ export class ProjectContent extends LitElement {
   }
 
   render() {
-    console.log({ projects: this.projects })
-
     return html`
       <article class="Projects-content">
         ${this.projects.map(
