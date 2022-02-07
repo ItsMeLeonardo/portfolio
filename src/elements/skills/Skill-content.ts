@@ -4,40 +4,49 @@ import { customElement, property } from 'lit/decorators.js'
 import { styles } from './styles'
 import './Skill-list'
 
-import type { Technology } from './types'
+import type { TechGrouped } from './types'
 // @ts-ignore
-import techGroupedData from '../../data/technologies.json'
+import techGroupedLocal from '../../data/technologies.json'
+import { getTechnologies } from '../../services/getData'
 
 @customElement('skill-content')
 export class SkillContent extends LitElement {
   static styles = styles
 
   @property()
-  comingSoon: Technology[] = techGroupedData.technologies.comingSoon
+  skills: TechGrouped | undefined
 
-  @property()
-  medium: Technology[] = techGroupedData.technologies.medium
+  async getTechnologies() {
+    const [technologies, error] = await getTechnologies()
+    if (error || !technologies) {
+      console.log({ error, origin: 'getTechnologies' })
+      this.skills = techGroupedLocal.technologies
+      return
+    }
+    this.skills = technologies
+  }
 
-  @property()
-  advanced: Technology[] = techGroupedData.technologies.advanced
+  protected firstUpdated(
+    _changedProperties: Map<string | number | symbol, unknown>,
+  ): void {
+    this.getTechnologies()
+  }
 
   render() {
-    console.log(this.comingSoon, this.medium, this.advanced)
-
     return html`
       <div class="Skills-content">
         <skill-list
-          .techList=${this.advanced.slice(0, 6)}
+          .techList=${this.skills?.advanced?.slice(0, 6)}
           headline="Technologies I master"
         ></skill-list>
 
         <skill-list
-          .techList=${this.medium.slice(0, 6)}
+          .techList=${this.skills?.medium?.slice(0, 6)}
           headline="I have worked with"
         ></skill-list>
 
         <skill-list
-          .techList=${this.comingSoon.slice(0, 6)}
+          .techList=${this.skills?.comingSoon?.slice(0, 6)}
           headline="I would like to learn"
         ></skill-list>
       </div>

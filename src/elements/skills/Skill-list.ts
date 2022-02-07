@@ -22,7 +22,7 @@ export class SkillList extends LitElement {
         <header class="skills-title">
           <h3 class="skills-title">${this.headline}</h3>
           <ul class="Skills-list">
-            ${this.techList.map(
+            ${this.techList?.map(
               (tech) =>
                 html`
                   <skill-item
