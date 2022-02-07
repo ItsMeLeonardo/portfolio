@@ -12,5 +12,5 @@ export type TechGrouped = {
   comingSoon: Technology[]
   advanced: Technology[]
   medium: Technology[]
-  other: Technology[]
+  other?: Technology[]
 }
