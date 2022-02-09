@@ -3,18 +3,20 @@ import { customElement, property } from 'lit/decorators.js'
 import { styles } from './styles'
 
 import { Project } from '../projects/types'
+import { getProjects } from '../../services/getData'
 
 import './Section-image'
 import './Section-info'
+
 //@ts-ignore
-import projects from '../../data/project.json'
+import data from '../../data/project.json'
 
 @customElement('modal-layout')
 export class ModalLayout extends LitElement {
   static styles = styles
 
   @property()
-  private projects: Project[] = projects.projects
+  private projects: Project[] = []
 
   @property({ type: String })
   titleProject = ''
@@ -30,8 +32,28 @@ export class ModalLayout extends LitElement {
     this.isOpen = false
     document.body.style.overflow = 'auto'
   }
+  private async getProjects() {
+    const [projects, error] = await getProjects()
+    if (error || !projects) {
+      // if have error, we find the projects from local data
+      console.error({ error, origin: 'modal' })
+      this.projects = data.projects
+      return
+    }
+
+    this.projects = projects
+  }
+  protected firstUpdated(
+    _changedProperties: Map<string | number | symbol, unknown>,
+  ): void {
+    this.getProjects()
+  }
 
   render() {
+    if (this.projects.length === 0) {
+      return
+    }
+
     const project = this.projects.find(
       (project) => project.title === this.titleProject,
     )
