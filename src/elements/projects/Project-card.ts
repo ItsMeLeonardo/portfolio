@@ -11,6 +11,8 @@ import type { Media } from '../utils/Types'
 @customElement('project-card')
 export class ProjectCard extends LitElement {
   static styles = styles
+  @property()
+  project: any = {}
 
   @property({ type: String })
   title = ''
@@ -55,6 +57,7 @@ export class ProjectCard extends LitElement {
     const modalDetail = this.showModal
       ? html`<modal-layout
           titleProject="${this.title}"
+          .project=${this.project}
           .toggleModal=${this.toggleModal}
           .isOpen=${this.showModal}
         ></modal-layout>`

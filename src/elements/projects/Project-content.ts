@@ -5,9 +5,9 @@ import { styles } from './styles'
 import './Project-card'
 
 import type { Project } from './types'
+import { getProjects } from '../../services/getData'
 // @ts-ignore
 import data from '../../data/project.json'
-import { getProjects } from '../../services/getData'
 
 @customElement('project-content')
 export class ProjectContent extends LitElement {
@@ -44,6 +44,7 @@ export class ProjectContent extends LitElement {
               .demo=${project.demo}
               .technologies=${project.technologies}
               .poster=${project.poster}
+              .project=${project}
             />
           `,
         )}
