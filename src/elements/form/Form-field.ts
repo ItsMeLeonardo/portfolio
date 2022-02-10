@@ -14,7 +14,7 @@ export class FormField extends LitElement {
   name: string = ''
 
   @property({ type: String })
-  type: string = 'text'
+  type: 'hidden' | 'text' | 'email' | 'password' | 'textarea' = 'text'
 
   @property({ type: Boolean })
   isRequired = true
@@ -66,6 +66,7 @@ export class FormField extends LitElement {
     const errorMessage = html`
       <span class="Form-error-message"> ${this.error.message} </span>
     `
+
     if (this.type === 'textarea') {
       return html`
         <div class="Form-field ${this.error.hasError ? 'Form-error' : ''}">
@@ -75,7 +76,7 @@ export class FormField extends LitElement {
             class="Form-input"
             cols="30"
             rows="10"
-            required=${this.isRequired}
+            ?required=${this.isRequired}
             placeholder=" "
             @focusout=${this.onBlur}
           ></textarea>
@@ -88,11 +89,11 @@ export class FormField extends LitElement {
     return html`
       <div class="Form-field ${this.error.hasError ? 'Form-error' : ''}">
         <input
-          type="${this.type}"
+          type=${this.type}
           id="${this.name}"
           name="${this.name}"
           placeholder=" "
-          required=${this.isRequired}
+          ?required=${this.isRequired}
           class="Form-input"
           @focusout=${this.onBlur}
         />

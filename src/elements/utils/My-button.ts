@@ -14,7 +14,7 @@ export class MyButton extends LitElement {
   type = 'primary'
 
   @property({ type: String })
-  role = 'Button'
+  role: 'button' | 'reset' | 'submit' = 'button'
 
   render() {
     return html`

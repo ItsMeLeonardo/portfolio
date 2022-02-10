@@ -13,7 +13,7 @@ import data from '../../data/project.json'
 export class ProjectContent extends LitElement {
   static styles = styles
 
-  @property()
+  @property({ type: Array })
   projects: Project[] = []
 
   private async getProjects() {
@@ -35,6 +35,9 @@ export class ProjectContent extends LitElement {
   }
 
   render() {
+    if (!this.projects) {
+      return
+    }
     return html`
       <article class="Projects-content">
         ${this.projects.map(

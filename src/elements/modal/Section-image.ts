@@ -8,14 +8,14 @@ import { styles } from './styles'
 export class SectionImage extends LitElement {
   static styles = styles
 
-  @property()
+  @property({ type: Array })
   screens: Media[] = []
 
   render() {
     return html`
       <div class="Detail-screens-content">
         <div class="Detail-screens">
-          ${this.screens.map(
+          ${this.screens?.map(
             (screen, index) => html`
               <label for="screen-${index}" class="Detail-screen">
                 <input

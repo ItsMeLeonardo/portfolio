@@ -10,11 +10,11 @@ import type { Technology } from './types'
 export class SkillList extends LitElement {
   static styles = styles
 
-  @property()
+  @property({ type: Array })
   techList: Technology[] = []
 
   @property()
-  headline: string | undefined
+  headline: string = ''
 
   render() {
     return html`
@@ -29,7 +29,7 @@ export class SkillList extends LitElement {
                     .url="${tech.webpage}"
                     .techName="${tech.name}"
                     .icon=${tech.icon}
-                  />
+                  ></skill-item>
                 `,
             )}
           </ul>

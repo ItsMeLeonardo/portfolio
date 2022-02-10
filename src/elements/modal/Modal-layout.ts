@@ -30,9 +30,7 @@ export class ModalLayout extends LitElement {
   }
 
   render() {
-    const project = this.project
-
-    if (!this.isOpen) {
+    if (!this.isOpen || !this.project) {
       return null
     }
 
@@ -46,24 +44,26 @@ export class ModalLayout extends LitElement {
               paramIcon="close"
               className="close-modal"
               alt="close menu"
-            />
+            ></icon-picture>
           </header>
 
           <article class="Modal-body">
             <div class="Modal-section image">
-              <section-image .screens="${project?.screens}" />
+              <section-image
+                .screens="${this.project?.screens}"
+              ></section-image>
             </div>
 
             <div class="Modal-section info">
               <section-info
                 class="Modal-section"
-                .repo="${project?.repo}"
-                .website="${project?.website}"
-                .title="${project?.title}"
-                .description="${project?.description}"
-                .technologies="${project?.technologies}"
-                .softSkills="${project?.softSkills}"
-              />
+                .repo="${this.project?.repo}"
+                .website="${this.project?.website}"
+                .title="${this.project?.title}"
+                .description="${this.project?.description}"
+                .technologies="${this.project?.technologies}"
+                .softSkills="${this.project?.softSkills}"
+              ></section-info>
             </div>
           </article>
         </div>

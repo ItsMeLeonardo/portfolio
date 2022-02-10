@@ -17,16 +17,16 @@ export class ProjectCard extends LitElement {
   @property({ type: String })
   title = ''
 
-  @property()
+  @property({ type: Object })
   poster: Media | undefined
 
-  @property()
+  @property({ type: Object })
   demo: Media | undefined
 
-  @property()
+  @property({ type: Array })
   technologies: Technology[] = []
 
-  @property()
+  @property({ type: Boolean })
   showModal: boolean = false
 
   toggleModal() {
@@ -67,13 +67,13 @@ export class ProjectCard extends LitElement {
       <div class="ProjectCard">
         <video
           class="ProjectCard-image"
-          poster="${this.poster?.url}"
+          poster="${this.poster?.url || ''}"
           muted
           loop
           @mouseenter=${this.playVideo}
           @mouseleave=${this.pauseVideo}
           @click=${this.toggleVideo}
-          src="${this.demo?.url}"
+          src="${this.demo?.url || ''}"
         ></video>
 
         <aside class="Project-tech">
@@ -104,7 +104,7 @@ export class ProjectCard extends LitElement {
               paramIcon="arrow-right"
               alt="arrow right"
               class="icon-size-1-5"
-            />
+            ></icon-picture>
           </button>
         </footer>
       </div>

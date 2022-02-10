@@ -22,10 +22,10 @@ export class SectionInfo extends LitElement {
   @property({ type: String })
   description = ''
 
-  @property()
+  @property({ type: Array })
   softSkills: string[] = []
 
-  @property()
+  @property({ type: Array })
   technologies: Technology[] = []
 
   render() {
@@ -46,7 +46,7 @@ export class SectionInfo extends LitElement {
             className="Detail-icon IconContent"
             alt="Eye icon"
             paramIcon="eye"
-          />
+          ></icon-picture>
         </a>
         <a href="${this.repo}" class="Button Button--gray" target="_blank">
           View Code
@@ -54,7 +54,7 @@ export class SectionInfo extends LitElement {
             className="Detail-icon IconContent"
             alt="github icon"
             paramIcon="github"
-          />
+          ></icon-picture>
         </a>
       </div>
 

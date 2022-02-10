@@ -13,7 +13,7 @@ import { getTechnologies } from '../../services/getData'
 export class SkillContent extends LitElement {
   static styles = styles
 
-  @property()
+  @property({ type: Object })
   skills: TechGrouped | undefined
 
   async getTechnologies() {
@@ -33,6 +33,10 @@ export class SkillContent extends LitElement {
   }
 
   render() {
+    if (!this.skills) {
+      return
+    }
+
     return html`
       <div class="Skills-content">
         <skill-list

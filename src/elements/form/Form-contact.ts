@@ -14,7 +14,7 @@ import '../utils/My-Toast'
 export class FormContact extends LitElement {
   static styles = styles
 
-  @property()
+  @property({ type: Object })
   private contact: Contact = {
     name: '',
     email: '',
@@ -52,23 +52,24 @@ export class FormContact extends LitElement {
 
   handleSubmit(event: Event) {
     event.preventDefault()
-    if (!this.error.hasError) {
-      this.isLoading = true
-      sendMessage(this.contact)
-        .then((response) => {
-          console.log({ response })
-          this.isSuccess = true
-          this.isLoading = false
-        })
-        .catch((error) => {
-          console.log({ error })
-          this.isLoading = false
-          this.error = {
-            message: error,
-            hasError: true,
-          }
-        })
+    if (this.error.hasError) {
+      return
     }
+    this.isLoading = true
+    sendMessage(this.contact)
+      .then((response) => {
+        console.log({ response })
+        this.isSuccess = true
+        this.isLoading = false
+      })
+      .catch((error) => {
+        console.log({ error })
+        this.isLoading = false
+        this.error = {
+          message: error,
+          hasError: true,
+        }
+      })
   }
 
   private createToast = () => {
@@ -84,7 +85,6 @@ export class FormContact extends LitElement {
     return html`
       ${this.isSuccess ? this.createToast() : ''}
       <form
-        action="#"
         class="Form Contact-form ${this.isLoading ? 'isLoading' : ''}"
         id="${this.id}"
         @submit=${this.handleSubmit}
