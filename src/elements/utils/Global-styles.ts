@@ -50,20 +50,27 @@ export const globalStyles = [
 
     /* ---- scroll ----*/
     ::-webkit-scrollbar {
-      width: 0.5rem;
-      height: 0.5rem;
+      --size: 1rem;
+      width: var(--size);
+      height: var(--size);
     }
     ::-webkit-scrollbar-track {
-      background: var(--gray);
+      background: var(--main-bg);
     }
-
     ::-webkit-scrollbar-thumb {
       background: rgba(255, 142, 60, 0.5);
+      -webkit-transition: 0.5s ease-in-out;
       transition: 0.5s ease-in-out;
       border-radius: 10px;
+      border: 0.25rem solid var(--main-bg);
     }
     ::-webkit-scrollbar-thumb:hover {
       background: var(--primary);
+    }
+    * {
+      /* scroll for firefox */
+      scrollbar-color: var(--primary) var(--gray);
+      scrollbar-width: thin;
     }
 
     /* ---- glass effect ---- */
