@@ -6,7 +6,6 @@ import './Skill-list'
 
 import type { TechGrouped } from './types'
 // @ts-ignore
-import techGroupedLocal from '../../data/technologies.json'
 import { getTechnologies } from '../../services/getData'
 
 @customElement('skill-content')
@@ -20,7 +19,6 @@ export class SkillContent extends LitElement {
     const [technologies, error] = await getTechnologies()
     if (error || !technologies) {
       console.log({ error, origin: 'getTechnologies' })
-      this.skills = techGroupedLocal.technologies
       return
     }
     this.skills = technologies

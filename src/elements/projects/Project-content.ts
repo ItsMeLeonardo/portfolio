@@ -6,8 +6,6 @@ import './Project-card'
 
 import type { Project } from './types'
 import { getProjects } from '../../services/getData'
-// @ts-ignore
-import data from '../../data/project.json'
 
 @customElement('project-content')
 export class ProjectContent extends LitElement {
@@ -21,7 +19,6 @@ export class ProjectContent extends LitElement {
     if (error || !projects) {
       // if have error, we find the projects from local data
       console.error({ error, origin: 'getProjects' })
-      this.projects = data.projects
       return
     }
 
